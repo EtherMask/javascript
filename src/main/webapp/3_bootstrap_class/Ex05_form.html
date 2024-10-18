@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>기본 샘플 확인</title>
+
+<!-- 부트스트랩 -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<!--  ............................................................................  -->
+
+	<div class="container">
+
+		<h4 class="text-danger">기본적인 HTML5의 폼</h4>
+		<form action='sever.jsp' method='post'>
+			<label for="name">이름</label> <input type="text" id='name' name='name'
+				placeholder="이름"> <label for="email">이메일</label> <input
+				type="email" id='email' name='email' placeholder="이메일">
+			<button type="submit">확인</button>
+		</form>
+		<hr>
+
+		<h4 class="text-danger">부트스트랩의 폼</h4>
+		<form class='form-inline'>
+			<div class='form-group'>
+				<label for="name">이름</label> 
+				<input class='form-control' type="text" id='name' placeholder="이름">
+			</div>
+
+			<div class='form-group'>
+				<label for="email">이메일</label> 
+				<input class='form-control' type="email" id='email' placeholder="이메일">
+			</div>
+				
+			<div class='form-group'>
+				<button type="submit">확인</button>
+			</div>
+		</form>
+
+	</div>
+
+	<!--  ............................................................................  -->
+
+	<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

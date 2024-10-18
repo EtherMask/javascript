@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 새로운 for 문장 </title>
+<script type="text/javascript">
+
+var  arr = ['송혜교', '김태희', '전지현' ];
+
+// 0. 원래 for문
+for(var i=0 ; i<arr.length ; i++) {
+	document.write(arr[i] + '<br/>')
+};
+
+/*
+ * 	[참고만] 자바의 향상된 for
+ 		for(String n : arr) {
+ 			
+ 		}
+ */
+
+// 1. for...in :  요소를 순서대로 처리하기
+for(var i in arr) {
+	document.write(i + '<br/>')			// index값이 나옴
+	document.write(arr[i] + '<br/>')
+};
+
+var obj = {first:'하나', seceond:'둘', third:'셋'};
+	for(var i in obj) {
+		document.write(i + '<br/>')
+		document.write(obj[i] + '<br/>')
+	};
+
+//----------------------------------------------------
+// 2. for...of  (es6) : 열거형의 요소를 순서대로 처리하기
+/* for(var i of arr) {
+	document.write(i + '<br/>')		// 저장된 값이 나옴
+}
+ */
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

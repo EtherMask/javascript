@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.text4 {
+	font-size: 12px;
+	font-family: "굴림", "굴림체";
+	color: #333333;
+}
+.text2 {
+	font-size: 11px;
+	color: #FF6633;
+}
+.text1 {font-size: 11px; font-family: "굴림", "굴림체"; color: #333333; }
+.text3 {
+	font-size: 11px;
+	font-family: "굴림", "굴림체";
+	color: #00769D;
+	font-weight: bold;
+}
+

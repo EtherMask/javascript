@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>셀렉터 만들기</title>
+<style>
+	
+/* 태그 이름 선택자 */
+h3, li {color : brown;}	
+
+/* 자식, 자손 선택자 */
+#list > li > span {background: yellow;} /* 자식과 자손은 다르다 */
+
+/* 가상선택자 */
+li:first-of-type { border: 2px dashed blue;}
+
+li:hover { background: mistyrose; 
+		   color: violet;
+		   font : 20px 궁서;
+		 }
+
+</style>
+</head>
+
+<body class="main">
+<h3> 우리들의 행복한 시간 </h3>
+<hr>
+<div> 
+	<div>오늘도 <strong>나는</strong>행복을 찾는 사람입니다.</div>
+	<ul id="list">
+ 		<li><span>차 한잔 하기</span></li>
+		<li><strong>좋은 음악 듣기</strong></li>
+		<li>재미있는 웹툰 보기</li>
+	</ul>
+	<div class="warning">인상쓰지 않기</div>
+</div>
+</body>
+</html>

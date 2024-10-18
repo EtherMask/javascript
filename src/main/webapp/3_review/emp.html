@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>emp.html</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<form action='server.jsp' method='post'> <!-- method='post' -->
+	<fieldset>
+	<div class="container">
+	<h2 class='text-primary'>사원정보</h2>
+		<h4>사번 입력</h4>
+			<input id='empno' name='empno' type='number' pattern='[0~100]' class='form-control'>
+		<h4>이름 입력</h4>
+			<input id='ename' name='ename' type='text' class='form-control'>
+		<h4>업무 입력</h4>
+			<input id='job' name='job' type='text' class='form-control'>
+		<h4>월급 입력</h4>
+			<input id='sal' name='sal' type='number' class='form-control'>
+		<h4>부서번호 입력</h4>
+			<input  id='deptno' name='deptno' type='number' pattern='[0~100]' class='form-control' >
+			<h4>     </h4>
+		<div class="form-group has-success">
+		<button type="submit" class="btn btn-md btn-primary"  role="button">입력값 저장</button>
+		</div>	
+	</div>	
+	<!-- =================================================================== -->
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- =================================================================== -->
+		
+	<!-- <form action="sever.jsp" method='post'>
+	
+		<legend>사원정보</legend>
+		<ol>
+			<li>
+				<label for='empno'>사번</label>
+				<input id='empno' name='empno' type='text'>
+			</li>
+			<li>
+				<label for='ename'>이름</label>
+				<input id='ename' name='ename' type='text'>
+			</li>
+			<li>
+				<label for='job'>업무</label>
+				<input id='job' name='job' type='text'>
+			</li>
+			<li>
+				<label for='sal'>월급</label>
+				<input id='sal' name='sal' type='text'>
+			</li>
+			<li>
+				<label for='deptno'>부서번호</label>
+				<input id='deptno' name='deptno' type='text'>
+			</li>
+		</ol>-->
+		</fieldset>
+	</form>
+</body>
+</html> 
+
+<!-- 
+[1] 화면구성
+	- 사번, 이름, 업무, 월급, 부서번호를 입력받아서
+	  서버에 전송할 수 있는 화면 구현
+	  [hint] form 태그 이용 
+ -->

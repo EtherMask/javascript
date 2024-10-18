@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 자료형</title>
+<script type="text/javascript">
+
+/* 1. 자바스크립트는 데이터타입에 관대하다
+     변수를 선언할 때 데이타타입을 정하지 않는다
+		(1) 변수 선언 : var
+*/
+ /* let byensu = '문자열';
+	console.log("변수의 값: " + byensu);
+	document.write("변수의 값: " + byensu + "<br/>");
+	document.write(typeof byensu);
+
+	byensu = 1000;
+	document.write("변수의 값: " + byensu + "<br/>");
+	document.write(typeof byensu);
+	 
+	var byensu = 35.6;
+	document.write("변수의 값: " + byensu + "<br/>");
+	document.write(typeof byensu);*/
+	
+	
+/*   (2) let  (es6)
+ 		- 변수의 중복 선언을 허용하지 않는다
+ 		- 블럭 범위(scope)를 인식한다 -> 나중에 확인
+ */
+
+/*  let byensu = '문자열';
+	console.log("변수의 값: " + byensu);
+	document.write("변수의 값: " + byensu + "<br/>");
+	document.write(typeof byensu); */
+
+
+/*	(3) const : 상수선언 (es6)
+	- 값을 재대입 금지
+	- 명명 권장 : 모두 대문자에 단어사이는 _로 표시
+*/
+
+/* const byensu = '문자열';
+console.log("변수의 값: " + byensu);
+document.write("변수의 값: " + byensu + "<br/>");
+document.write(typeof byensu); */
+
+/* byensu = 1000;
+document.write("변수의 값: " + byensu + "<br/>");
+document.write(typeof byensu); */
+
+	/* // [참고만하기]
+	const data = [1, 2, 3];
+	//data = [11, 22, 33];
+	data[1] = 100;
+	document.write(data); */
+
+//----------------------------------------------------------------
+// 2. 리터럴 - 변수의 값
+/* var	arr = [ '안녕', 'Hello', 'Hola', '아쌀라무 알라이꿈' ];
+	document.write('배열의값: ' + arr + '<br/>');
+ 		
+var	arr2 = [ '안녕', [ 'Hello', '아쌀라무 알라이꿈' ], '봉쥬르' ];
+	document.write('배열의값: ' + arr2[1][1] + '<br/>');
+
+var	obj = { x : '안녕',  y : 'Hello' ,  z : '봉쥬르' };
+	document.write('객체의 값: ' + obj.x		+ '<br/>');
+	document.write('객체의 값: ' + obj['x']	+ '<br/>');
+
+var abc;
+document.write(abc + '<br/>');
+document.write('객체의 값: ' + obj.a + '<br/>'); */
+
+//-------------------------------------------------------
+/* 3. 분할 대입 (destructuring assignment) : (es6)
+ 			- 배열과 객체의 요소를 분할하는 부분
+ 		(1) 배열 분할
+ */
+/*  var data = [10, 20, 30, 40, 50];
+ var a0 = data[0];
+ var a1 = data[1];
+ var a2 = data[2];
+ document.writeln(a0+ a1+ a2 + "<br/>");  
+ console.log(a0, a1, a2 ) */
+ 
+ var [a, b, c, d, e] = [10, 20, 30, 40, 50];
+ document.writeln(a + "<br/>");
+ document.writeln(c + "<br/>");
+ 
+ var [a, b, ...other] = [10, 20, 30, 40, 50];
+ document.writeln(a + "<br/>");
+ document.writeln(other + "<br/>");
+ 
+ let v1 = 100;
+ let v2 = 200;
+ 
+ [v2, v1] = [v1, v2];
+ 
+ document.write('v1: ' + v1 + ' v2: ' + v2 + '<br/>');
+ 
+ 
+ /*  (2) 객체 분할
+  */
+let book = {title:'채식주의자', publish:'문학', price:1000 };
+let {price , title, writer = '작가미상'} = book;
+document.write('제목: '+ title + '<br/>');
+document.write('가격: '+ price + '<br/>');
+document.write('작가: '+ writer + '<br/>');
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

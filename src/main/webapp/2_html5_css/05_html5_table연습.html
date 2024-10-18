@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 테이블 꾸미기 연습 </title>
+<style type="text/css">
+/*
+	1. 테이블의 테두리를 이뿌게 지정
+	2. 테이블의 제목칸을 눈에 띄게 꾸미기
+	3. 테이블의 짝수줄과 홀수줄의 색상을 다르게
+	4. 테이블에 마우스를 올리면 올라간 색만 눈에 띄게 변경
+*/
+
+h2 {
+color:#CFB53B;
+}
+
+table {
+	background : #FAFAD2;
+	border-radius: 30px 40px 30px 40px;
+	border: 2px solid black;
+	padding: 10px 15px 10px 15px;
+	margin : 20px 30px 20px 30px;
+}
+td:not(td:first-child){
+	cursor: pointer;
+}
+
+td:hover{
+	background: #FFDF00;
+ 	/* cursor: pointer;  */
+}
+
+/* th의 첫번째 타입 테두리 변경 */
+th:first-of-type {
+	border-radius: 10px 0px 0px 0px;
+}
+/* th의 마지막 타입 테두리 변경 */
+th:last-of-type {
+	border-radius: 0px 10px 0px 0px;
+}
+
+/* th전체의 테두리 및 배경색 변경 */
+th {
+	border : 2px solid #1E90FF;
+	background: white;
+}
+
+/* td전체의 테두리 및 공백 */
+td {
+	padding: 10px 15px 10px 15px;
+	margin : 10px 15px 10px 15px;
+	border : 1px solid #4169E1;
+	background: #E6E6FA;
+}
+
+td:first-of-type {
+	background: #87CEFA;
+} 
+/* 왼쪽 맨아래 테두리 깎기 */
+tr:last-child > td:nth-last-of-type(4) {
+	border-radius: 0px 0px 0px 10px;
+}
+/* 오른쪽 맨아래 테두리 깎기 */
+tr:last-child > td:nth-last-of-type(1) {
+	border-radius: 0px 0px 10px 0px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="celebs">
+        <h2 class="heading" > 우리 스타 보기</h2>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>이름</th>
+              <th>직업</th>
+              <th>거주지</th>             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>203A</td>
+              <td>샤이니</td>
+              <td>가수</td>
+              <td>용인</td>
+            </tr>
+            <tr>
+              <td>141B</td>
+              <td>소녀시대</td>
+              <td>가수</td>
+              <td>부산</td>
+            </tr>
+            <tr>
+              <td>2031</td>
+              <td>김수현</td>
+              <td>배우</td>
+              <td>뉴욕</td>
+            </tr>
+            <tr>
+              <td>007F</td>
+              <td>국카스텐</td>
+              <td>가수</td>
+              <td>마산</td>
+            </tr>
+            <tr>
+              <td>8A05</td>
+              <td>김태희</td>
+              <td>배우</td>
+              <td>서울</td>
+            </tr>
+            <tr>
+              <td>6636</td>
+              <td>송혜교</td>
+              <td>배우</td>
+              <td>런던</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>

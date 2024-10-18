@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>회원 가입</title>
+
+<!-- 외부 CSS 파일 연결 -->
+<link href='./css/myform.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>로그인 정보</legend>
+			<ol>
+				<li><label for="userid">아이디</label> <input id="userid"
+					name="userid" type="text" required autofocus>
+					</li>
+				<li><label for="pwd1">비밀번호</label> <input id="pwd1" name="pwd1"
+					type="password" required>
+					</li>
+				<li><label for="pwd2">비밀번호 확인</label> <input id="pwd2"
+					name="pwd2" type="password" required>
+					</li>
+				<li><label for="level">회원 등급</label> <input id="level"
+					name="level" type="text" readonly value="준회원">
+					</li>
+			</ol>
+		</fieldset>
+
+		<fieldset>
+			<legend>개인 정보</legend>
+			<ol>
+				<li><label for="fullname">이름</label> <!--  [추가] 한글만 입력 처리 : pattern='[ㄱ-힣]'  -->
+					<input id="fullname" name="fullname" type="text"
+					placeholder="5자미만 공백없이" pattern='[ㄱ-힣]+' required></li>
+				<li><label for="email">메일 주소</label> <input id="email"
+					name="email" type="email" placeholder="abcd@domain.com" required
+					autocomplete="off"></li>
+				<li><label for="tel">연락처</label> <!-- [과제] 전화번호를 패턴으로 설정하고자 한다면?
+    		010-은 value로 지정해주고 ( 앞에 010을 어떻게 지정하지?? ) 
+    		pattern='[0-9]{3|4}-[0-9]{4}' 로 지정하는 것이  ( 3자리와 4자리 ? ) --> <input
+					id="tel" name="tel" type="tel" autocomplete="off"></li>
+				<li><label for="date">생일</label> <input id="date" name="date"
+					type="date" autocomplete="off"></li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<legend>코딩 숙련도(상,중,하)</legend>
+			<ol>
+				<li><input id="skill" name="skill" type="range" min="1"
+					max="10" step="1" list='skillstep'> <!-- datalist : 실선으로 단계를 보이게 하는 것임 -->
+					<datalist id="skillstep">
+						<option value="2" label="Low">
+						<option value="5" label="Medium">
+						<option value="8" label="High">
+					</datalist></li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<button type="submit">제출</button>
+		</fieldset>
+	</form>
+</body>
+</html>

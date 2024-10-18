@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Javascript 객체지향 </title>
+</head>
+<body>
+<script>
+
+//0. 	클래스 선언 -  생성자로 초기화하기
+function Student(id, name, dept){
+	this.id = id;
+	this.name = name;
+	this.dept = dept;
+	
+	this.display =function(){
+		var str  = "학번: "+id;
+		str += "/이름:" + name;
+		str += "/학과:" + dept + "<br/>"; 
+		return   str;
+	}
+}
+
+var kim = new Student("001","김길동", "컴공");
+var lee = new Student("002","이길동", "경영");
+
+document.write( kim.display() );
+document.write( lee.display() );
+
+</script>
+</body>
+</html>

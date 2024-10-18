@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZZAPSUNG</title>
+
+<!-- Bootstrap -->
+<link href="./css/nomalize.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
+<link href="./css/animate.css" rel="stylesheet">
+<link href="./css/jquery.fancybox.css" rel="stylesheet">
+
+<style type="text/css">
+.hidden {
+	display: none;
+}
+</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll"
+	data-offset="50">
+	<div class="container-fluid">
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+				id="navbar-scroll">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-1-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="./imgs/logo.png"
+							alt="9PixelStudio"> </a>
+					</div>
+
+					<!-- 네비게이션 메뉴 -->
+					<div
+						class="collapse navbar-collapse navbar-right navbar-1-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html"> HOME </a></li>
+							<li><a href="about.html"> 정보 </a></li>
+							<li><a href="portfolio.html"> 제품 </a></li>
+							<li><a href="contact.html"> 회원가입 </a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<!-- /.navbar-collapse -->
+		</nav>
+	</div>
+
+	<div id="portfolio"></div>
+	<!-- 포트폴리오 시작 -->
+	<div class="content2">
+		<header>
+			<div class="container">
+				<h1>
+					<small>짭성 가전제품</small>
+				</h1>
+				<p>2024년부터 최근까지 짭성이 작업한 결과물들입니다.</p>
+			</div>
+		</header>
+	</div>
+	<ul class="nav nav-pills"
+		style="margin-top: 20px; display: flex; justify-content: center;">
+		<li role="presentation" class="Clickable"><a href="#" id="tv-tab">TV(40)</a></li>
+		<li role="presentation" id="fridge-tab" class="Clickable"><a
+			href="#">냉장고/김치냉장고/큐브냉장고(36)</a></li>
+		<li role="presentation" id="clothing-tab" class="Clickable"><a
+			href="#">의류케어</a></li>
+		<li role="presentation" class="disabled"><a href="#">에어컨</a></li>
+		<li role="presentation" class="disabled"><a href="#">청소기/공기청정기/제습기(15)</a></li>
+		<li role="presentation" class="disabled"><a href="#">식기세척기/전기레인지/오븐(14)</a></li>
+	</ul>
+	<div id="tv-content" class=" container portfolio  wp4 delay-05s">
+		<h2 class="sans">TV 제품</h2>
+		<p>주방 가전, 청소 기기, 생활 가전 제품의 개발 과정과 기술을 소개</p>
+		<div id="carousel-generic" class="carousel2 slide">
+			<div class="carousel-inner">
+				<div class="item active">
+
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/더프레임.jpg" alt="...">
+								<div class="caption">
+									<h3>더 프레임TV</h3>
+									<p>슬림핏 벽걸이를 사용하면 맞춤 제작한 액자처럼 빈틈없이 밀착됩니다. 설치 방법도 액자를 거는 것만큼
+										간단하죠.</p>
+									<p>
+										<a href="./imgs/portfolio/더프레임.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/삼성 2024 Crystal UHD UD9000 98인치.jpg"
+									alt="...">
+								<div class="caption">
+									<h3>삼성 2024 Crystal UHD UD9000 98인치</h3>
+									<p>초대형 사이즈의 예술적 디자인 초대형 화면에서도 향상된 화질을 위한 초대형 화질 강화 눈앞에 있는 듯
+										생생한 4K 경험 크리스탈 프로세서 4K</p>
+									<p>
+										<a href="./imgs/portfolio/삼성 2024 Crystal UHD UD9000 98인치.jpg"
+											class="btn btn-primary" role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/삼성 2024 NEO QND90.jpg" alt="...">
+								<div class="caption">
+									<h3>삼성 2024 NEO QND90(247cm)</h3>
+									<p>Neo QLED로 즐기는 더 놀라운 세상 삼성의 AI기술로 4K 경험을 완성하는 2세대 AI 4K
+										프로세서</p>
+									<p>
+										<a href="./imgs/portfolio/삼성 2024 NEO QND90.jpg"
+											class="btn btn-primary" role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="sans">Design Innovations</h2>
+					<p>최신 디자인 트렌드를 반영한 가전제품 외형과 기능적 디자인의 종류</p>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/tv1.jpg"> <img
+									src="./imgs/portfolio/tv1.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/tv2.jpg"> <img
+									src="./imgs/portfolio/tv2.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/tv1.jpg"> <img
+									src="./imgs/portfolio/tv1.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/46형.avif"> <img
+									src="./imgs/portfolio/tv2.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+
+						<nav aria-label="Page navigation" style="text-align: center;">
+							<ul class="pagination"
+								style="display: inline-flex; list-style: none; padding: 0;">
+								<li><a href="#" aria-label="Previous"> <span
+										aria-hidden="true">&laquo;</span>
+								</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#" aria-label="Next"> <span
+										aria-hidden="true">&raquo;</span>
+								</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+				<!-- /.item active -->
+			</div>
+			<!-- /.carousel-inner -->
+		</div>
+		<!-- /#carousel-generic
+					<!-- portfolio end-->
+
+		<footer class="content3">
+			<div class="container">All contents copyright&#169; 2024
+				zzapsung.com</div>
+		</footer>
+
+	</div>
+
+
+	<div id="fridge-content"
+		class=" container portfolio  wp4 delay-05s hidden">
+		<h2 class="sans">냉장고 제품</h2>
+		<p>주방 가전, 청소 기기, 생활 가전 제품의 개발 과정과 기술을 소개</p>
+		<div id="carousel-generic" class="carousel2 slide">
+			<div class="carousel-inner">
+				<div class="item active">
+
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/ice1.jpg" alt="...">
+								<div class="caption">
+									<h3>삼성 bespoke 냉장고 4도어 849L(빅아이스/큐브UV탈취)</h3>
+									<p>스스로 사용량을 예측하고 조절하는 AI절약모드로 에너지 소비량을 최대23%까지 절감해보세요 에너지
+										효율을 높여주는 AI 인버터 컴프레서</p>
+									<p>
+										<a href="./imgs/portfolio/ice1.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/kim1.jpg" alt="...">
+								<div class="caption">
+									<h3>비스포크 AI 김치플러스 1등급 4도어 583L</h3>
+									<p>사용패턴에 맞춰 적정온도를 유지하는 AI 정온 모드 냉기를 꽉 잡아 아삭하고 신선하게 메탈쿨링</p>
+									<p>
+										<a href="./imgs/portfolio/kim1.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/cu.jpg" alt="...">
+								<div class="caption">
+									<h3>일반형 냉장고 203L</h3>
+									<p>심플하게 오래도록 아름답게 모던 디자인 크고 널찍하게 수납하는 빅박스</p>
+									<p>
+										<a href="./imgs/portfolio/cu.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="sans">Design Innovations</h2>
+					<p>최신 디자인 트렌드를 반영한 가전제품 외형과 기능적 디자인의 종류</p>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/add1.jpg"> <img
+									src="./imgs/portfolio/add1.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/add2.png"> <img
+									src="./imgs/portfolio/add2.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/add3.jpg"> <img
+									src="./imgs/portfolio/add3.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/add4.jpg"> <img
+									src="./imgs/portfolio/add4.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+
+						<nav aria-label="Page navigation" style="text-align: center;">
+							<ul class="pagination"
+								style="display: inline-flex; list-style: none; padding: 0;">
+								<li><a href="#" aria-label="Previous"> <span
+										aria-hidden="true">&laquo;</span>
+								</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#" aria-label="Next"> <span
+										aria-hidden="true">&raquo;</span>
+								</a></li>
+							</ul>
+						</nav>
+
+
+					</div>
+				</div>
+				<!-- /.item active -->
+			</div>
+			<!-- /.carousel-inner -->
+		</div>
+		<!-- /#carousel-generic
+					<!-- portfolio end-->
+
+
+		<footer class="content3">
+			<div class="container">All contents copyright&#169; 2024
+				zzapsung.com</div>
+		</footer>
+
+	</div>
+
+
+	<div id="clothing-content"
+		class=" container portfolio  wp4 delay-05s hidden">
+		<h2 class="sans">의류케어 제품</h2>
+		<p>주방 가전, 청소 기기, 생활 가전 제품의 개발 과정과 기술을 소개</p>
+		<div id="carousel-generic" class="carousel2 slide">
+			<div class="carousel-inner">
+				<div class="item active">
+
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/dry1.jpg" alt="...">
+								<div class="caption">
+									<h3>의류관리기 5벌 크리스탈미러 에어드레서</h3>
+									<p>스팀으로 바이러스와 유해세균까지 효과적으로 살균 진동과 소음 걱정없는 최신 에어워시 방식</p>
+									<p>
+										<a href="./imgs/portfolio/dry1.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/dry2.jpg" alt="...">
+								<div class="caption">
+									<h3>비스포크 AI 콤보 25kg+15kg 세탁건조기</h3>
+									<p>세탁물 이동 없이 편리하게 하나로 건조하는 ONE솔루션 손끝으로 쉽게, 음성인식으로 간편하게 AI허브</p>
+									<p>
+										<a href="./imgs/portfolio/dry2.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail"
+								style="width: 300px; height: 550px; display: flex; flex-direction: column; justify-content: space-between;">
+								<img src="./imgs/portfolio/dry3.jpg" alt="...">
+								<div class="caption">
+									<h3>드럼세탁기 25kg 그레이지 올인원 비스포크 그랑데AI</h3>
+									<p>세탁부터 탈수까지 알아서 AI맞춤세탁 평소 세탁 오염도에 맞는 세제량 투입까지 AI 세제자동 투입</p>
+									<p>
+										<a href="./imgs/portfolio/dry3.jpg" class="btn btn-primary"
+											role="button">사진 보기</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h2 class="sans">Design Innovations</h2>
+					<p>최신 디자인 트렌드를 반영한 가전제품 외형과 기능적 디자인의 종류</p>
+					<div class="row">
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/st2.jpg"> <img
+									src="./imgs/portfolio/st2.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/st1.png"> <img
+									src="./imgs/portfolio/st1.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/st3.jpg"> <img
+									src="./imgs/portfolio/st3.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-3">
+							<div class="thumbnail"
+								style="width: 300px; height: 200px; overflow: hidden;">
+								<a class="fancybox" rel="gallery2"
+									href="./imgs/portfolio/st4.jpg"> <img
+									src="./imgs/portfolio/st4.jpg" alt=""
+									style="width: 100%; height: 100%; object-fit: cover;">
+								</a>
+							</div>
+						</div>
+
+						<nav aria-label="Page navigation" style="text-align: center;">
+							<ul class="pagination"
+								style="display: inline-flex; list-style: none; padding: 0;">
+								<li><a href="#" aria-label="Previous"> <span
+										aria-hidden="true">&laquo;</span>
+								</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#" aria-label="Next"> <span
+										aria-hidden="true">&raquo;</span>
+								</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+				<!-- /.item active -->
+			</div>
+			<!-- /.carousel-inner -->
+		</div>
+		<!-- /#carousel-generic
+					<!-- portfolio end-->
+
+		<footer class="content3">
+			<div class="container">All contents copyright&#169; 2024
+				zzapsung.com</div>
+		</footer>
+
+	</div>
+
+
+
+	<!--  fluid container 끝 -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap-hover-dropdown.js"></script>
+	<script src="./js/animatescroll.min.js"></script>
+	<script src="./js/simpleparallax.js"></script>
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.fancybox.js"></script>
+	<script>
+    
+
+      
+          $('.wp1').waypoint(function() {
+            $('.wp1').addClass('animated fadeInLeft');
+          }, {
+            offset: '75%'
+          });
+          $('.wp2').waypoint(function() {
+            $('.wp2').addClass('animated fadeInUp');
+          }, {
+            offset: '75%'
+          });        
+          $('.wp3').waypoint(function() {
+            $('.wp3').addClass('animated fadeInDown');
+          }, {
+            offset: '55%'
+          });
+          $('.wp4').waypoint(function() {
+            $('.wp4').addClass('animated fadeInDown');
+          }, {
+            offset: '75%'
+          });
+          $('.wp5').waypoint(function() {
+            $('.wp5').addClass('animated fadeInRight');
+          }, {
+            offset: '75%'
+          });
+
+     /*  $(document).ready(function() {
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      }); */
+ 
+
+    </script>
+
+
+	<script>
+	$(document).ready(function() {
+	    // TV 콘텐츠가 처음에 보이도록 설정
+	    $('#tv-content').removeClass('hidden');
+	    $('#fridge-content').addClass('hidden');
+	    $('#clothing-content').addClass('hidden');
+	    
+	    // TV 탭 클릭 이벤트 처리
+	    $('#tv-tab').on('click', function(e) {
+	        e.preventDefault(); // 기본 링크 동작 방지
+	        $('#tv-content').removeClass('hidden'); // TV 콘텐츠를 보이게 설정
+	        $('#fridge-content').addClass('hidden'); // 냉장고 콘텐츠 숨기기
+	        $('#clothing-content').addClass('hidden'); // 의류 콘텐츠 숨기기
+	    });
+	    
+	    // 냉장고 탭 클릭 이벤트 처리
+	    $('#fridge-tab').on('click', function(e) {
+	        e.preventDefault();
+	        $('#fridge-content').removeClass('hidden');  // 냉장고 콘텐츠 표시
+	        $('#tv-content').addClass('hidden');         // TV 콘텐츠 숨기기
+	        $('#clothing-content').addClass('hidden');   // 의류 콘텐츠 숨기기
+	    });
+	    
+	    // 의류 탭 클릭 이벤트 처리
+	    $('#clothing-tab').on('click', function(e) {
+	        e.preventDefault();
+	        $('#clothing-content').removeClass('hidden');  // 의류 콘텐츠 표시
+	        $('#tv-content').addClass('hidden');           // TV 콘텐츠 숨기기
+	        $('#fridge-content').addClass('hidden');       // 냉장고 콘텐츠 숨기기
+	    });
+	});
+
+</script>
+</body>
+</html>

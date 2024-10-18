@@ -1,0 +1,77 @@
+<!-- 크롬에서 F12 > 개발자 모드
+
+개발자 모드 오른쪽 상단 > 점세개 모양 > Dock slide
+		각자의 취향대로 개발자 모드를 위치 설정
+		
+F9 :  next step
+F10 : step over (함수를 호출하면 결과만 받고 현재 위치에서 다음 라인 실행 )
+F11 : step into (함수 안에 들어가기 )
+
+for문을 선택하여 breakpont 설정
+for문 안에 선택하면 for문의 조건문과 증가치를 모두 매번 단계로 확인한다
+
+watch 탭에서 +를 누르고 result 변수를 지정하면 매단계 result 변수를 볼 수 있다.
+
+ 			   # DOM Breakpoints  #
+			 	- 엘리먼트의 속성이 변경되는 것을 감시하시 위해
+				- 소스 탭에서는 DOM 브렉포인트를 잡을 수 없고 엘리먼트 탭에서 잡아줘야 한다.
+				- 엘리먼트 탭에서 요소를 선택 > 오른마우스 > Break On > Attributes Modificattion > DOM Breakpoints에 추가됨
+						Subtree Modifications: 해당 노드의 자식노드의 변화, 예를들면 자식노드의 추가나 삭제를 하는 자바스크립트 코드에 브렉포인트를 잡아준다.
+						Attributes Modificattion: 해당 노드의 어트리뷰트를 변경하는 자바스크립트 코드에 브렉포인트를 잡아준다.
+						Node Removal: 해당노드를 삭제하는 자바스크립트 코드에 브렉포인트를 잡아준다.
+		    
+
+  				 # XHR/fetch breakpoints 
+  				 - ajax 통신시 url을 설정하면 
+  				 - any XHR이라고 추가하면 모든 ajax통신에 대해 설정
+   -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 크롬 디버그</title>
+<script>
+
+	var result = 0;
+	// 디버깅 모드에서 Scope > Global에서는 result 변수 외에 많은 기존 변수가 다 나온다
+	// watch 탭에서 +를 누르고 result 변수를 지정하면 매단계 result 변수를 볼 수 있다
+	
+	window.onload = function(){
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			for( var i = 10; i >=0 ; i-=2){
+				result += i;
+			}
+				
+			result += func1();			//re.innerHTML = result  ;	
+			result += func2();		//re.innerHTML = result  ;	
+			alert('결과:' + result );
+			// alert()이 나중에 있어도 먼저 실행하고 나서 화면 결과에 출력된다???
+			// 각 줄에 alert()를 여러개 지정해도 alert()만 먼저 다 실행된다.
+			
+			//-----------------------------------  2 DOM Breakpoints
+			var re = document.getElementById('re');
+			re.value = result  ;
+
+		}
+	}
+	
+	function func1(){
+		var temp1 = 100;
+		return temp1;
+	}
+	
+	function func2(){
+		var temp1 = 1000;
+		return temp1;
+	}
+</script>
+</head>
+<body>
+
+<input type='button' value='시작' id='btn'>
+<input type='text' id='re'>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 폼 예제 1 </title>
+</head>
+<body>
+아래의 폼을 완성하시렵니까<br><br>
+<form name="frm" id='frm' method="post" action="something.jsp">
+
+	
+
+	<label for="nickname">별명</label>
+	<input id="nickname" pattern="[A-Za-z]{3,}" maxlength="10" value="1">
+	<br>
+	<label for="myemail">이메일</label>
+	<input type="email" id="myemail" required>
+	<br>
+	<label for="myage">나이</label>
+	<input type="number" id="myage" min="0" max="100" step="20" value="23">
+	<br>
+	<input type="submit" value="눌려봐">
+</form>
+</body>
+</html>

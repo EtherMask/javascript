@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Array 객체 </title>
+<script type="text/javascript">		
+
+// 1. 배열의 함수 확인
+
+	var arr = ['김태희','송혜교','전지현','김고은','임수정'];
+	document.writeln( arr + '<br/>');
+	document.writeln( arr.join('/'));
+	document.writeln( arr.join('or') + '<br/>');
+	document.writeln(arr.slice(1, 3) + '<br/>');
+	
+	document.writeln( arr.reverse() + '<br/>');
+	document.writeln( arr + '<br/>');	// --> 원본수정여부
+	document.writeln( arr.sort() + '<br/>');	
+	document.writeln( arr + '<br/>');	// --> 원본수정여부
+	
+	var temp = ['이도현', '변우석'];
+	document.writeln( arr.concat(temp) + '<br/>');
+	document.writeln( arr + '<br/>');	// --> 원본수정여부
+	
+	// [주의]
+	var ArrayList = [5, 15, 20, 9];
+	document.writeln( ArrayList.sort() + '<br/>');	// 숫자를 숫자로 안보고 문자로 봐버림
+	document.writeln( ArrayList + '<br/>');	// --> 원본수정여부
+	
+	
+	// 2. 배열을 스택과 큐로 이용하기
+	 	var data = [];
+		data.push('박서준');
+		data.push('현빈');
+		data.push('박보검');
+		// pop은 stack과 같다
+		document.writeln( data.pop() + "<br/>");	// stack : LIFO Last In First Out 
+		document.writeln( data.pop() + "<br/>");	// queue : FIFO Frist In First Out
+		document.writeln( data.pop() + "<br/>");
+		document.writeln( data.pop() + "<hr/>");
+		
+		// shift는 queue와 같다
+		var data2 = [];
+		data2.push('박소담');
+		data2.push('김고은');
+		data2.push('이지은');
+		document.writeln( data2.shift() + "<br/>");
+		document.writeln( data2.shift() + "<br/>");
+		document.writeln( data2.shift() + "<br/>");
+		document.writeln( data2.shift() + "<hr/>");
+			
+	// 3. es6
+
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> String 객체 </title>
+<script type="text/javascript">		
+/* 	var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자';
+	document.writeln( str.indexOf('삶') + '<br/>');		// 3번째
+	document.writeln( str.lastIndexOf('삶')+ '<br/>');	// 7번째
+	document.writeln( str.indexOf('삶을') + '<br/>');		// 11번째
+	document.writeln( str.length + '<br/>');			// 24
+	
+	document.writeln( str.startsWith('삶') + '<br/>');	// false
+	document.writeln( str.endsWith('삶') + '<br/>');		// false
+	document.writeln( str.includes('삶') + '<hr/>');		// true */
+
+	
+/* 	var msg = '자바에서 웹프로젝트까지 열심히 하자!';
+	document.writeln( msg.charAt(3)+ '<br/>');			// 서
+	document.writeln( msg.slice( 5, 12 )+ '<br/>');		//웹부터 지뒤에 공백까지
+	document.writeln( msg.substring( 5, 12 )+ '<br/>');	//웹부터 지뒤에 공백까지
+	document.writeln( msg.substr(5, 7 ) + '<br/>');		//웹부터 지까지
+	document.writeln( msg.split(' ')+ '<br/>');			//자바에서/웹프로젝트까지/열심히/하자!
+	document.writeln( msg.concat('화이팅')+ '<br/>');		//원본을 건드리진않는다 +화이팅이 추가됨
+	document.writeln( msg +  '<hr/>'); */
+	
+	
+	
+/*  	var  text = '♡해yo';
+	document.writeln( text.length +  '<br/>');			// 한글 영어 기호 상관없이 한글자로 계산
+	document.writeln( text.repeat(2) +  '<br/>');		// 2번 반복출력
+	document.writeln( text.codePointAt(0) +  '<br/>');	// 9825
+	document.writeln( String.fromCodePoint(9825) +  '<br/>'); 
+	
+	
+	document.writeln( String.fromCodePoint(128169) +  '<br/>'); */	// dong모양 캐릭터 기호 
+	
+	const myname = '윤기영';
+	const myage = 22;
+	
+	const message = '내 이름은 ' + myname + '입니다. 나이는 ' + myage + '입니다';
+		document.writeln(message + '<hr/>');
+	
+// 문자열 템플릿
+//			--> 따옴표가 아니라 역따옴표
+const message2 = `내 이름은 $(myname)입니다. $(myage)나이는 입니다`;
+	document.writeln(message + '<hr/>');
+	
+   </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

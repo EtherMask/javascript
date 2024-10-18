@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 연습</title>
+<style type="text/css">
+	
+	
+	/* 1. 요소로 찾기 */
+	div {color: red; } /* <<div 태그로 찾기 */
+	
+	/* 2. 아이디로 찾기 */
+	
+/* 	#point100 { color: green; }
+	#point100 { color: cyan; }
+	
+	body div#point100 { color: yellow; } */
+	body#bodyid div#point100 { color: #FFDF00; }
+	
+	/* 3. 클래스로 찾기 */
+	.point10 {color:pink; }
+	
+	div.point10 { color : #FFDF00; }
+	
+	/* 4. 속성으로 찾기 */
+/* 	
+	input[type=text] {border : 2px solid #FFD700} 
+	input[type=button] { color : red; } 
+	input:first-of-type { border: 2px dotted red;}
+	input:last-of-type { border: 2px dotted red;}
+	input:nth-child(5) { border: 2px dotted red;}
+	input:nth-last-child(2) { border: 2px dotted red;}
+*/
+	
+	input:checked { color: pink; }
+	
+</style>
+</head>
+<body id='bodyid'>
+	
+	<div id="point100" class="point10">안녕하세요</div>
+	
+	
+	<p>
+		<input type="text" value="입력1">
+		<input type="checkbox"> 선택
+		<input type="radio" name="rd"  checked="checked"> 예
+		<input type="radio" name="rd"> 아니오
+		<input type="text" value="입력2" disabled="disabled">		
+		<input type="button" value="확인">
+		<input type="button" value="취소">
+	</p>
+	
+	
+</body>
+</html>

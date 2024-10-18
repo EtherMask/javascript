@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>progress</title>
+<style>
+</style>
+</head>
+<body>
+	<p>다운로드 중</p>
+	<progress max="100" id="progress"></progress>
+</body>
+<script>
+	var progress = document.getElementById("progress");
+	var current = 0;
+
+	
+	
+	
+
+	/* [참고]
+	window.setInterval(func, time) : time 시간 간격으로 반복 처리를 한다
+	window.setTimeout(func, time) : 지정된 시간이 경과 했을 때 한 번만 처리한다
+	
+	그러나,
+	1) 실행시간을 보증하지 않는다
+		큐에 수행할 작업이 남아있으면 그 작업들이 끝나야 실행하기 때문이다
+	2) 시간을 0으로 지정하면 비동기 처리가 된다
+		function hoge(){
+			console.log('A');
+			setTimeout(function(){
+				console.log('B');
+			},0);
+			console.log('C');
+		}
+		hoge();
+		결과는 A-C-B가 된다
+*/	
+</script>
+</html>

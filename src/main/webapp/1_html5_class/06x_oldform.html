@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>old form</title>
+</head>
+<body>
+<form id="myform" action="#">
+	<label for="email">email</label>
+	<input type="text" id="email" name="email">
+	<input type="submit">
+</form>
+</body>
+<script>
+	document.querySelector("#myform").addEventListener("submit", function(e){
+		var email = document.querySelector("#email");
+		var isValidate = false;
+		var regexp = /[a-z]+[a-z0-9]*\.?[a-z0-9]*@[a-z0-9]+\.?[a-z0-9]*/i;
+		 if(!regexp.test(email.value)){
+			alert("이메일 형식이 다릅니다.");
+			e.preventDefault();
+		} 
+	});
+</script>
+</html>

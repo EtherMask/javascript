@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body>
+ <div class="container">  
+<h1> 드롭다운 </h1>
+
+<hr>
+<h4> 네비게이션 바 드롭다운 </h4>
+    <nav role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div>
+        <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span> <!-- sr-xxx : 라벨숨기는 것인데 시각장애인을 위한 screen reader에서 사용하도록  -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#">로고 </a>
+      </div>
+     
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class='nav navbar-nav'>
+          <li class='dropdown'>
+            <a href="#" data-toggle="dropdown">메뉴 1 <b class="caret"></b></a>
+            <ul class='dropdown-menu'>
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"  data-toggle="dropdown">메뉴 2 <b class="caret"></b></a>
+            <ul>
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+		</li>
+          <li>
+            <a href="#" data-toggle="dropdown">메뉴 3 <b class="caret"></b></a>
+            <ul>
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+#footer { 
+	height:75px;
+	margin-bottom:15px;
+	background:url('../../images/common/footerbg.gif') repeat-x 0 0;
+}
+
+
+.footerInner {
+	position:relative;
+	width:940px;
+	margin:0 auto; 
+	padding-top:13px;
+}
+
+
+.footerLogo {
+	position:absolute;
+	top:60px;	
+	left:43px;	
+}
+
+
+.guideMenu, address {
+	margin-left:180px;
+}
+
+/*  1. 전반적인 메뉴 리스트 */
+/* .guideMenu li { */
+/* 	padding:6px 10px 4px 10px;  */
+/* 	background:url('../../images/common/footer_bar.gif') no-repeat 0 50%; */
+/* 	color:#fff; */
+/* 	font-weight:bold; */
+/* 	list-style-type: none; */
+/* 	#################### */
+/* } */
+
+
+
+/* 2. 메뉴 색상 지정 */
+/* #footer .guideMenu li a { */
+/* 	color: #FFF;	 */
+/* } */
+
+/* .guideMenu li.first-item { */
+/* 	background:none; */
+/* } */
+
+
+/* .guideMenu li.first-item { */
+/* 	background:url('../../images/common/bg_guide_menu.gif') no-repeat 0 0; */
+/* 	padding-left:5px; */
+/* } */
+
+
+
+
+/* 3.  자식인 <li> 요소들이 float되어 높이가  1~2px로 되어 배경색을 지정해도 안됨.
+		그래서 overflow:auto; 로 자식 크기를 자동으로 계산해야  배경색 적용됨  */
+/* .guideMenu {   */
+/* 	width:686px; */
+/* 	margin-bottom:17px; */
+/* 	background:#7b8385 url('../../images/common/bg_guide_menu.gif') no-repeat 100% -35px;  */
+/* 	#################### */
+/* } */

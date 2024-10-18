@@ -1,0 +1,45 @@
+<!-- 
+	1. 새로운 창을 연다
+		창변수 = window.open ( "URL", "창이름이거나 타겟", "옵션지정" )
+	
+			* 옵션
+			direction='yes/no'	: 디렉토리바 표시 여부
+			location='yes/no'	: 로케이션바 표시 여부
+			menubar='yes/no'	: 메뉴바 표시 여부
+			scrollbars='yes/no'	: 스크롤바 표시 여부
+			status='yes/no'		: 상태바 표시 여부
+			toolbar='yes/no'	: 툴바 표시 여부
+			resizable='yes/no'	: 창 크기 변경가능 여부
+			width=숫자(픽셀단위)	: 창의 폭
+			height=숫자(픽셀단위)	: 창의 높이
+			
+	2. 창을 닫는다
+		창변수.close()
+		
+	3. 창이 열려있는지 확인
+		창변수.closed()
+		
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> window 예제 </title>
+<script type="text/javascript">
+
+	
+</script>
+</head>
+<body>
+	<form name="frm">
+		<h1> 이동하길 원하는 페이지를 선택하세요 </h1>
+		<select name="chooseSite">
+			<option>골라 골라</option>
+			<option value="http://www.daum.net">다음네</option>
+			<option value="http://www.naver.com">네이바</option>
+			<option value="http://www.nate.com">네이또</option>
+		</select>
+	</form>
+</body>
+</html>

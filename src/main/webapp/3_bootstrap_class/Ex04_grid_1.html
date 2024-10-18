@@ -1,0 +1,66 @@
+<!-- (3) 화면을 작게 하여 반응형을 웹을 확인  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 기본 샘플 확인 </title>
+    
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    	<!-- (2) 선을 그려 확인  -->
+		<style>
+				.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+				.col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11,  .col-md-12 {
+				  border: 1px solid red;
+				  padding: 10px;
+				}
+				.row{
+				  margin-bottom: 4px;
+				  margin-top: 4px;
+				  }
+		</style>
+</head>
+<body>
+	<!--  ............................................................................  -->   
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+      <div class="col-md-1"> 1칸 </div>
+    </div>
+
+	<div class='row'>
+		<div class="col-md-4"> 4칸 </div>
+		<div class="col-md-4"> 4칸 </div>
+		<div class="col-md-4"> 4칸 </div>
+		<!-- <div class="col-md-1"> 1칸 </div> -->
+	</div>
+		<div class='row'>
+		<div class="col-md-6"> 6칸 </div>
+		<div class="col-md-2"> 2칸 </div>
+		<div class="col-md-2 col-md-offset-2"> 2칸 </div> <!-- 2칸을 옆으로 밀어버림 -->
+	</div>
+  </div>
+
+	<!--  ............................................................................  --> 
+	
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

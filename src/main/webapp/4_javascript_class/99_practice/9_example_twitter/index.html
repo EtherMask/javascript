@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twittler</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <div id="title">Twittler</div>
+
+    <div id="w-container">
+        Username<br>
+        <input class="userName" type="text"><br>
+        Message<br>
+        <textarea class="userMessage"></textarea><br>
+        <button id="pushNewTweet">tweet!</button>
+    </div>
+
+    <div id="r-container">
+        <div id="r-section1">
+            <button id="r-btn" class="pushRandomTweet">check new tweet</button>
+        </div>
+        <ul id="r-section2">
+            <template>
+                <li>
+                    <span class='name'>name</span>
+                    <span class='time'>time</span>
+                    <div class='message'>message</div>
+                </li>
+            </template>
+        </ul>
+    </div>
+
+
+	<!-- 자바스크립트 -->
+	<script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

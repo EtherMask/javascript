@@ -1,0 +1,57 @@
+<!-- 
+	display:none		 : 화면에 안보이게함
+	
+	display:block		 : 항상 새라인에서 시작하고 옆에 다른 요소 배치 안됨
+						width, height, padding, margin, border 조절 가능
+	display:inline		 : 새라인에서 시작 못하고 옆에 다른 요소와 배치 가능
+						width, height, padding, margin, border 조절 불가능
+	display:inline-block : 새라인에서 시작 못하고 옆에 다른 요소와 배치 가능
+						width, height, padding, margin, border 조절 가능
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 박스의 유형 제어 - display </title>
+<style type="text/css">
+	div > div {
+		margin:10px;
+		padding:10px;
+		
+		/* display:inline-block; */
+		
+	}
+	
+	/* 아이템을 감싸는 컨테이너 역할에 지정 */
+	body hr+div {
+		display: flex;		/* display에서 flex를 쓰면은 row가 기본값이다 */
+		
+		/* flex-direction: row-reverse; */
+		
+		flex-direction: row;
+		
+		/* justify-content: flex-strat; */
+		/* justify-content: flex-end; */
+		/* justify-content: flex-center; */
+		/* justify-content: space-around; */
+		justify-content: space-between;
+		
+	}
+	
+	/* div > div:nth-of-type(2) {
+		 display:none;
+		 visibility:hidden;  display:none은 이미지가 있었던 공간도 같이 가려버리지만
+							  visibility:hidden은 이미지만 가리고 이미지가있던 공간은 내버려둔다
+	} */
+</style>
+</head>
+<body>
+	<hr/>
+	<div style="background: orange">
+	<div><img src='./img/spade-2.png' width='200px' height='300px'/></div>
+	<div><img src='./img/spade-3.png' width='200px' height='300px'/></div>
+	<div><img src='./img/spade-7.png' width='200px' height='300px'/></div>
+</div>
+
+</body>
+</html>

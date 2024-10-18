@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZZAPSUNG</title>
+
+<!-- #####  Bootstrap ##### -->
+<link href="./css/nomalize.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
+<link href="./css/animate.css" rel="stylesheet">
+<link href="./css/jquery.fancybox.css" rel="stylesheet">
+
+<style>
+.row a div span {
+	background: navy;
+	border: 4px solid navy;
+}
+
+.row a div span:hover {
+	border: 0px solid navy;
+}
+
+.addr-box {
+	padding-top: 50px;
+	margin-top: 30px;
+}
+
+.imap {
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+}
+
+.addr {
+	width: 100%;
+	height: 600px;
+	float: right;
+}
+</style>
+<style type="text/css" media="screen and (max-width:800px)">
+.addr {
+	clear: both;
+	height: 100%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+</style>
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll"
+	data-offset="50">
+
+	<div class="container-fluid">
+
+		<!-- menu -->
+		<div class="container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+				id="navbar-scroll">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-1-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="./imgs/logo.png"
+							alt="9PixelStudio"> </a>
+					</div>
+
+					<!-- 네비게이션 메뉴 -->
+					<div
+						class="collapse navbar-collapse navbar-right navbar-1-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html"> HOME </a></li>
+							<li><a href="about.html"> 정보 </a></li>
+							<li><a href="portfolio.html"> 제품 </a></li>
+							<li><a href="contact.html"> 회원가입 </a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+		</div>
+
+
+		<!-- image slide -->
+		<div id="carousel-generic" class="carousel slide">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Carousel items -->
+			<div class="carousel-inner" align="center">
+				<div class="item active">
+					<img src="./imgs/2.jpg" alt="First slide">
+				</div>
+				<div class="item">
+					<img src="./imgs/1.jpg" alt="Second slide">
+				</div>
+				<div class="item">
+					<img src="./imgs/3.jpg" alt="Third slide">
+				</div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-generic"
+				data-slide="prev"> <img src="./imgs/left.png" class="control">
+			</a> <a class="right carousel-control" href="#carousel-generic"
+				data-slide="next"> <img src="./imgs/right.png" class="control">
+			</a>
+		</div>
+
+
+		<!-- icon -->
+		<div class="container">
+			<div class="row service wp1">
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<a href="#">
+							<div class="col-xs-4 col-md-12">
+								<span class="glyphicon glyphicon-cog icons"> </span>
+							</div>
+							<div class="col-xs-8 col-md-12 icontxt">
+								<h4>미친성능</h4>
+								<p>국내 전자기기 중 474위로 높은 성능을 자랑합니다.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<a href="#">
+							<div class="col-xs-4 col-md-12">
+								<span class="glyphicon glyphicon-usd icons"> </span>
+							</div>
+							<div class="col-xs-8 col-md-12 icontxt">
+								<h4>높은가격</h4>
+								<p>국내에서 유일하게 삼성전자와 LG전자를 뛰어넘은 가격으로 제품을 판매하고 있습니다.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<a href="#">
+							<div class="col-xs-4 col-md-12">
+								<span class="glyphicon glyphicon-wrench icons"> </span>
+							</div>
+							<div class="col-xs-8 col-md-12 icontxt">
+								<h4>내구성 구데기</h4>
+								<p>평균 환불 기간과 AS주기가 가장 짧아 서비스 센터는 항상 문전성시를 이루고 있습니다.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="row">
+						<a href="#">
+							<div class="col-xs-4 col-md-12">
+								<span class="glyphicon glyphicon-user icons"> </span>
+							</div>
+							<div class="col-xs-8 col-md-12 icontxt">
+								<h4>고객늦장응대</h4>
+								<p>저의 회사는 워라벨이 가장 중요하여 민원 처리에 최대 9개월까지 소요될 수 있습니다.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- icons end-->
+
+
+		<!-- 지도 -->
+		<div class='container'>
+			<div class='row'>
+				<div class='col-sm-6'>
+					<iframe class='imap'
+						src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=백범로23"
+						width="600" height="600"></iframe>
+				</div>
+				<div class='col-sm-6 addr-box'>
+					<fieldset class='addr'>
+						<legend class='text-primary glyphicon glyphicon-road'>&nbsp;오시는길</legend>
+						<div class='addr-text panel-body'>
+							<div>서울특별시 마포구 백범로23</div>
+							<div>K-TURTLE 3층 ICT</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+		<footer class="content3">
+			<div class="container">All contents copyright&#169; 2024
+				zzapsung.com</div>
+		</footer>
+
+	</div>
+	<!--  fluid container 끝 -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap-hover-dropdown.js"></script>
+	<script src="./js/animatescroll.min.js"></script>
+	<script src="./js/simpleparallax.js"></script>
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.fancybox.js"></script>
+	<script>
+       $('.carousel').carousel()
+       $('.carousel2').carousel({interval: 3000 }) 
+
+        /***************** Waypoints ******************/
+          $('.wp1').waypoint(function() {
+            $('.wp1').addClass('animated fadeInLeft');
+          }, {
+            offset: '75%'
+          });
+          $('.wp2').waypoint(function() {
+            $('.wp2').addClass('animated fadeInUp');
+          }, {
+            offset: '75%'
+          });        
+          $('.wp3').waypoint(function() {
+            $('.wp3').addClass('animated fadeInDown');
+          }, {
+            offset: '55%'
+          });
+          $('.wp4').waypoint(function() {
+            $('.wp4').addClass('animated fadeInDown');
+          }, {
+            offset: '75%'
+          });
+          $('.wp5').waypoint(function() {
+            $('.wp5').addClass('animated fadeInRight');
+          }, {
+            offset: '75%'
+          });
+//*  */
+      $(document).ready(function() {
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      });
+
+
+    </script>
+</body>
+</html>

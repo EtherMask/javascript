@@ -1,0 +1,25 @@
+
+* 부트스트랩이란?
+	웹 디자인을 편리하게 만들 목적에서 나온 프레임워크
+    프레임워크란? 정해진 틀에 맞춰서 완성품을 만드는 것
+    즉, 부트스트랩은 적은 노력으로 큰 효과의 웹 디자인을 만들 수 있는 틀이다
+
+[ 참고할 만한 사이트 ] 
+
+http://bootstrapk.com/ (한글판)
+
+http://getbootstrap.com/ (영문판)
+
+http://maczniak.github.io/bootstrap/index.html  (2.2.2 버전 )
+
+
+[ 다운로드 ]
+http://bootstrapk.com  > 다운로드 > [ 부트스트랩 다운로드 ] > 다운 압축풀고 폴더 복사
+
+[ 추가사항 ]
+
+http://bootstrapk.com  > 다운로드 > 오른쪽 메뉴 중 > 브라우저와 기기 호환 확인
+
+http://bootstrapk.com  > 다운로드 > 오른쪽 메뉴 중 > Third party
+( 다른 라이브러리와 충돌 나는 경우 - 대표적으로 구글맵 )
+
