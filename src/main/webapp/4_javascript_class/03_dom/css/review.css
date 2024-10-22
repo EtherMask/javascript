@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+h3 {color: blue;}
+
+img {
+	border : 2px solid lightgray;
+	margin : 30px;
+	widthx : 100px;
+	height : 100px;
+}

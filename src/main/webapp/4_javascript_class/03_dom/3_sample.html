@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	[1] 아이디로 찾기
+		` getElementById('아이디명')
+		` querySelector('#아이디명')
+		
+	[2] 클래스로 찾기
+		` getElementsByClassName('클래스명')
+		` querySelector('.클래스명')
+		` querySelectorAll('.클래스명')
+		
+	[3] name으로 찾기 - form안에 있는 경우
+		` 폼이름.네임명
+ -->
+<script type="text/javascript">
+window.onload = function() {
+	// 추가버튼이 눌렸을때
+	let btn = document.querySelector('#btn');
+	btn.onclick = function() {
+		//alert('ok')
+		/* document.getElementById('#name') */
+		let name = document.querySelector('#name').value;
+		//alert(name);
+		let dept = document.querySelector('.dept').value;
+		//alert(dept);
+		
+		let tbl = document.querySelector('#tbl > tbody');
+		
+		// 태그만들기
+		let tr	= document.createElement('tr');
+		let td1	= document.createElement('td');
+		let td2 = document.createElement('td');
+		
+		// 입력값을 TextNode 만들기
+		let txt1 = document.createTextNode(name);
+		let txt2 = document.createTextNode(dept);
+		
+		// 붙이기
+		// <td>텍스트</td>
+		td1.appendChild(txt1);	// <td>홍길동</td>
+		td2.appendChild(txt2);	// <td>IT</td>
+		
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		
+		tbl.appendChild(tr);
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+이름 <input type='text' id='name'><br/>
+부서 <input type='text' class='dept'><br/>
+<button id='btn'>추가</button>
+
+<hr/>
+<h2>우리 직원 명단</h2>
+
+<table border='2' id='tbl'>
+	<thead>
+		<tr>
+			<td>이름</td>
+			<td>부서</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+</body>
+</html>

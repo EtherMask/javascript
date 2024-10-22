@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_참고.html</title>
+
+<script type="text/javascript">
+window.onload = function() {
+	let btn		= document.querySelector('#btn');
+	let list	= document.querySelector('#list');
+	let items	= document.querySelectorAll('#list > li');
+	
+	btn.onclick = function() {
+		//`alert('확인완료')
+		// [1] appendChild()
+		/* let litag = document.createElement('li');
+		let text = document.createTextNode(new Date());
+		
+		litag.appendChild(text);	// <li>xxxxx</li>
+		list.appendChild(litag); */
+		
+		// [2] append()
+		let litag = document.createElement('li');
+		
+		litag.append(new Date());	// <li>xxxxx</li>
+		list.append(litag);
+		
+	}
+	
+	
+	for(let i=0; i<items.length ;i++) {
+		items[i].onclick = function() {
+			/*
+				` 부모노드.removeChild(자식노드)
+				` 삭제할노드.remove()
+			*/
+			//list.removeChild(items[i]);	// 이벤트를 발생한것을 선택할때 this를 쓰면 var를 써도 된다
+			this.remove();
+		}
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+	<h2 id='btn'>웹프로그래밍</h2>
+	
+	<ul id='list'>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exercise.html</title>
+<!-- 외부css연결 -->
+<link rel="stylesheet" href="css/exercise.css">
+<!-- 외부 js연결 -->
+<script src='scripts/exercise.js'>
+<!-- 
+	var : 예측가능 (자바 기본지식) / 문제많음
+			범위(scope) : function 안에 있는 변수만 지역변수 취급
+		
+	let : var 문제 해결 / 예측어려움
+			범위(scope) : 블록{} 안에 있는 변수만 지역변수 취급
+			
+ -->
+/* window.onload = function() {
+
+	//document.getElementsByClassName('.item');
+	var td = document.querySelectorAll('td'); */
+	
+/* 	for(var i=0; i<td.length ;i++) {
+		// i번쨰 td에서 클릭이벤트가 발생했을 때 함수를 연결
+		//	이벤트함수는 사용자가 클릭했을 떄 실행함
+		tds[i].onclick = function() {
+			alert(i);
+		}
+	} */
+	// alrert('i= '+i);		// i=6
+	
+/* 	for(let i=0; i<td.length ;i++) { //var가 아닌 let이여서 i는 for문안에서만 쓰는 지역변수이다
+		td[i].onclick = function() {
+			alert(i); 
+		}
+	}
+	// alert('i= ' + i); // -> 에러
+	
+}*/
+</script>
+</head>
+<body>
+	<table id='tbl'>
+		<tr>
+			<td class='first'	data-price='1000'>커피</td>
+			<td 				data-price='2000'>녹차</td>
+		</tr>
+		<tr>
+			<td class='first'	data-price='1500'>케익</td>
+			<td 				data-price='2500'>빵</td>
+		</tr>
+		<tr>
+			<td class='first'	data-price='4000'>과자</td>
+			<td 				data-price='4500'>초코렛</td>
+		</tr>
+	</table>
+</body>
+</html>
