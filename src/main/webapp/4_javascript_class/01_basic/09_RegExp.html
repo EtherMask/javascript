@@ -10,11 +10,20 @@ var p = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/gi;
 var str = '한 번을 둘러봐야 하는 사이트 http://www.w3schools.com/ 입니다';
 str += ' 또한 집중적으로 봐야하는 사이트 http://jqapi.ru/ 입니다';
 
+document.write(str + '<hr/>');
 
+// match() 함수
+var result = str.match(p);
+for(var i=0; i <result.length; i++) {
+	document.write(result[i] + '<br/>');
+}
 
 // 매치 성공여부 검증 
 var one = '한 번을 둘러봐야 하는 사이트 http://www.w3schools.com/ 입니다';
 var two= '또한 집중적으로 봐야하는 사이트 http://jqapi.ru/ 입니다';
+
+document.write(one.search(p) + '<br/>')
+document.write(two.search(p) + '<br/>')
 
 
 </script>
@@ -24,4 +33,4 @@ var two= '또한 집중적으로 봐야하는 사이트 http://jqapi.ru/ 입니�
 </body>
 </html>
 
-<!--  참고 https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D -->
+<!-- 참고 https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D -->

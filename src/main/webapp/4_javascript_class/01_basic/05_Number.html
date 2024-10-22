@@ -7,17 +7,27 @@
 
 
 // 1. 숫자 형식 메소드 
-var su = 123.456789;
+/* var su = 123.456789;
 document.writeln( su.toExponential(2)  + "<br/>" );	
-document.writeln( su.toFixed(3)  + "<br/>" );		
+document.writeln( su.toFixed(3)  + "<br/>" );			// 소숫점만 계산
 document.writeln( su.toFixed(7) + "<br/>" );	
 document.writeln( su.toPrecision(6)  + "<br/>" );	 
-document.writeln( su.toPrecision(10)  + "<br/>" );	
+document.writeln( su.toPrecision(10)  + "<br/>" ); */		// 전체 자릿수를 계산
 
 //-------------------------------------------------
 // 2. 형변환
+/* var n = '123';
+var n = '123a'; */
+var n = 'a123';
+document.writeln(Number(n) + "<br/>" );			// 문자가 붙어있으면 Not a Number가 뜬다
+document.writeln(parseInt(n) + "<br/>" );		// 문자가 뒤에 붙어있으면 그걸 제거하고 숫자로 형변환 시킨다
+document.writeln(parseFloat(n) + "<br/>" );		
 
+document.writeln(parseDouble(n) + "<br/>" );	// 에러가나면 에러가 난 부분에서 멈춘다
+document.writeln("오늘도 행복합시다<hr/>");
 
+// [확인]
+//number + String = String
 
 
 </script>
@@ -26,3 +36,17 @@ document.writeln( su.toPrecision(10)  + "<br/>" );
 
 </body>
 </html>
+
+<!-- 
+	
+	컴파일언어 : c, java
+	
+			source code (xxx.c, xxx.java)
+				-> 컴파일(번역) 파일(xxx.obj, xxx.class)
+			
+			실행시는 컴파일 파일을 실행
+	
+	인터프리터언어 : python, javascript
+			
+			실행시 한줄 읽으면서 실행
+ -->

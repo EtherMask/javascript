@@ -7,12 +7,24 @@
 
 	window.onload = function(){
 		// 1. alert
-		
+		//window.alert('이 페이지는 http://ictedu.atosoft.net 으로 이사갑니다.')
+		//window.location.href='http://ictedu.atosoft.net';
+		//location.href='http://ictedu.atosoft.net';
+		//window.location = 'http://ictedu.atosoft.net';
+		//location = 'http://ictedu.atosoft.net';		// location 만으로도 이동가능
 		
 		// 2. confirm
+	/* 	var result = confirm('이 페이지는 이사갑니다. \n이동하시겠습니까?');
+		//alert(result);
 		
+		if(result) {
+			location = 'http://ictedu.atosoft.net';
+		}*/
+		 
 		
 		// 3. prompt : 
+		var result = prompt('원하는 사이트를 정확히 입력하세요.');
+		location = result;
 		
 	}
 

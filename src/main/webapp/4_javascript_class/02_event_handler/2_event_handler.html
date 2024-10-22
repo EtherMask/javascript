@@ -2,9 +2,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 핸들러 연결 </title>
-  </head>
- <body>
-	<input type='button' value='눌러'  id='btn' />
- </body>
+<title>이벤트 핸들러 연결</title>
+
+<script type="text/javascript">
+
+window.onload = function() {
+	
+	var btn = document.getElementById('btn');
+ 	btn.onclick = function() {
+		alert('확인1');		// 아래 코딩의 축약형
+	}
+	
+/* 	btn.onclick = xxxx;
+	function xxxx() {
+		alert('확인2');
+	} */
+}
+
+
+
+</script>
+
+</head>
+<body>
+	<input type='button' value='눌러' id='btn' />
+</body>
 </html>

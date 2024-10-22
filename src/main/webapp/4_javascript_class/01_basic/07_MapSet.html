@@ -12,10 +12,29 @@ m.set('script','2222');
 m.set('nodejs', '2222');
 m.set('java','3333');
 
+for(let n of m) {
+	document.write(n + '<br/>');
+}
+// 로그인 확인 연습
+let inputId = 'java';
+let inputPw = '3333';
 
+for(let [key, value] of m) {
+	
+	if( key === inputId & value === inputPw) {
+		document.write('로그인 성공 <br/>');
+		break;
+	}else {
+		document.write('로그인 실패 <br/>');
+	}
+		
+	
+}
 
- 
- 
+/* for(let n in m) {
+	document.write(n + '<br/>'); // map은 반복문에서 in이 안먹힌다
+}
+  */
 //-------------------------------------------------------
 // 2. Set  : 중복 값을 허용하지 않는 집합 관리 객체
 let s = new Set();
@@ -23,7 +42,6 @@ s.add('tiger');
 s.add('dog');
 s.add('lion');
 s.add('dog');
-
 
 </script>
 </head>

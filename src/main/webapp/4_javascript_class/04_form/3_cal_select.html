@@ -14,7 +14,6 @@
 		
 		3. 년과 월을 변경할 때마다 해당되는 일이 마지막날이 변경되어야 한다.
 		
-		
 -->
 <script type="text/javascript">
 //오늘 날짜 구하기
@@ -28,14 +27,81 @@ var weeks = ['일','월','화','수','목','금','토'];
 
 
 window.onload = function(){
-	
 	var frm = document.frm;
 	
 	// 년 구하기
 	for( var j=year-5;  j<= year+5; j++){
-		frm.y.add( new Option(j, j));				// 만들고 브라우저 F12에서 Elements로 확인 : Option(j)와 Option(j,j) 차이
+		frm.y.add( new Option(j));	// 만들고 브라우저 F12에서 Elements로 확인 : Option(j)와 Option(j,j) 차이
 	}
+	
+	// 월 구하기
+	for(let m=1; m<=12; m++) {
+		frm.m.add(new Option(m));
+	}
+	
+	// 해당월에 일 구하기
+	for(let d=1; d <= lastDays[month]; d++) {
+		frm.d.add(new Option(d));
+	}
+	
+	// 오늘날짜 출력(set)
+	/* 	frm.y[year-2019].selected = true; // 도훈님이 하신 방법
+	frm.m[month]	.selected = true;
+	frm.d[date-1]	.selected = true; */
+	
+	frm.y.value = today.getFullYear();
+	frm.m.value = today.getMonth()+1;
+	frm.d.value = today.getDate();
+	let weeks = ['일','월','화','수','목','금','토'];
+	frm.w.value = weeks[today.getDay()];
 
+	// 이벤트처리
+	frm.y.onchange = calc;
+	frm.m.onchange = calc;
+	frm.d.onchange = setDayOfWeek;
+	
+	function calc() {
+		// alert('ok');
+		// 사용자의 선택한 년, 월, 일을 가지고 오기
+		let y = frm.y.value;
+		let m = frm.m.value;
+		let d = frm.d.value;
+		
+		// 일수값 초기화 및 요일에 따른 마지막날 지정
+		frm.d.options.length=0;
+		// 윤년체크
+		let lday = lastDays[m - 1];
+		    if(m == 2) { // 2월일 경우
+		        if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+		            lday = 29; // 윤년
+		        } else {
+		            lday = 28; // 평년
+		        }
+		    }
+		// 마지막 날짜 설정
+		for (let i = 1; i <= lday; i++) {
+		        frm.d.add(new Option(i));
+		}
+		// 월에 따라 마지막날짜가 바뀌도록 설정
+		if(lastDays[m-1]-1 < d){	//도훈님이 알려주신 버전
+			frm.d[lastDays[m-1]-1].selected = true;
+		} else{
+			frm.d[d-1].selected = true;
+		} 
+		// chatGPT이용
+/* 		if (lday < d) {
+	        frm.d[lday - 1].selected = true;
+	    } else {
+	        frm.d[d - 1].selected = true;
+	    } */
+		// 요일 자동지정함수 호출
+		setDayOfWeek();
+	}
+	// 요일 자동지정함수
+	function setDayOfWeek(){
+		frm.w.value = weeks[new Date((frm.y.value)+'/'
+					+(frm.m.value)+'/'+(frm.d.value)).getDay()];
+	}
 }
 </script>
 

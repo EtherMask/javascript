@@ -4,24 +4,42 @@
 <meta charset="UTF-8">
 <title></title>
 <script type="text/javascript">
-	window.onload = function(){
-		document.getElementById('btn').onclick = function(){
-			 var s = document.getElementById('startDate').value;
-			 var e = document.getElementById('endDate').value;
-			 
-			 var sDate = new Date(s);
-			 var eDate = new Date(e);
+
+window.onload = function(){
+	
+	var btn = document.getElementById('btn');
+	//console.log(btn);
+	
+	btn.onclick = function() {
+		
+		var sDate = document.getElementById('startDate');
+		var eDate = document.getElementById('endDate');
+		
+		console.log(sDate.value);
+		console.log(eDate.value);
+		
+		var startDate	= new Date(sDate.value);
+		var endDate 	= new Date(eDate.value);
+		
+		var diff = endDate - startDate;
+		alert(diff);
+		
+		var diff2 = diff / (1000*60*60*24);
+		alert(diff2 + '일차이');
+		
+	}
+}
+
 
 	
-		}
-	}
 </script>
 </head>
 <body>
 		시작일 : <input type='date'  id='startDate'> 
 		~
-		종요일  : <input type='date' id='endDate'> 
+		종요일 : <input type='date' id='endDate'> 
 		
 		<input type='button' id='btn' value='여행일정'>
+		
 </body>
 </html>

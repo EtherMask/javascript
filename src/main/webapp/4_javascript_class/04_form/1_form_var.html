@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <title></title>
 <script type="text/javascript">
-
+window.onload = function() {
+	
+	document.getElementById('btn').onclick = function() {
+		//document.myForm.txt0.value = '안녕하세요';
+		// 위랑 아래랑 같은 코딩이다
+		for(let i=0; i<4 ;i++) {
+			document.myForm['txt'+i].value = '안녕하세요';
+		}
+	}
+	
+}
 </script>
 </head>
 <body>

@@ -28,9 +28,21 @@
 		function changeColor( colorVar )   // 함수 인자에 var도 쓰면 안됨
 		{
 			
-			// alert("넘겨받은 인자값 : " + colorVar);
+			 alert("넘겨받은 인자값 : " + colorVar);
 			// colorVar로 넘겨받은 값에 의해 분기하고자 switch~case 문 이용이 바람직
-
+			switch(colorVar) {
+			case 'A' :
+					document.bgColor = 'pink';
+					document.fgColor = 'blue';
+					break;
+			case 'B' :
+					document.bgColor = 'black';
+					document.fgColor = 'white';
+					break;
+			case 'C' :
+					document.bgColor = '#00FFFF';
+					document.fgColor = '#D4AF37';
+			}
 			
 		}
 	</script>

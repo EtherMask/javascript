@@ -8,12 +8,21 @@
   window.onload = function () {
 	  
 	  document.getElementById('btn').onclick = function(){
-			
+		  
 	// 1. ID값으로 노드 얻어오기
-
+/* 
+	var name = document.getElementById('name');
+	var result = document.getElementById('result');
+	result.innerHTML = '안녕, ' + name.value + '님'; 
+*/
 	
+/* 	document.getElementById('dept')
+	document.getElementById('univ') */
+	 
 	// 2. 클래스명으로 노드 얻어오기
-
+	var name = document.getElementsByClassName('cname');
+	var result = document.getElementById('result');
+	result.innerHTML = '안녕, ' + name[0].value + '님';
 	
 	// 3. 태그명으로 노드 얻어오기 
 	
@@ -37,11 +46,14 @@
 		*/
 		
 		// 5. DOM 구조는 아니지만 폼의 요소를 찾는 방법
-
+		//var name = document.querySelector('#name');
+		var name	= document.querySelector('.cname' );
+		var result	= document.querySelector('#result');
+		result.innerHTML = '안녕, ' + name.value + '님';
 		
 		
 	}
-  }
+}
   </script>
 </head>
 
@@ -50,11 +62,11 @@
 
 		<div id='label'>
 		 이름 : <input type="text" id="name" 	class="cname" name="name" size="15" />
-		 학과 : <input	type="text" id="dept" name="dept" size="15" /> 
-		 학교 : <input 	type="text" id="univ" name="univ" size="15" />
+		 학과 : <input type="text" id="dept" name="dept" size="15" /> 
+		 학교 : <input type="text" id="univ" name="univ" size="15" />
 		 </div>
 		<input id="btn" type="button" value="버튼" />
-		<div id="result"></div>
+		<div id="result">Null</div>
 
 </body>
 </html>

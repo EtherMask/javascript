@@ -4,6 +4,37 @@
 <meta charset="UTF-8">
 <title> 폼 예제 3 </title>
 <script type="text/javascript">
+window.onload = function() {
+	
+	// 오늘 날짜로 화면 초기화
+	let today = new Date();
+	frm1.y.value = today.getFullYear();
+	frm1.m.value = today.getMonth()+1;
+	frm1.d.value = today.getDate();
+	let today_weeks = ['일', '월', '화', '수', '목', '금', '토'];
+	frm1.w.value = today_weeks[today.getDay()];
+	
+	// 버튼이 눌렸을떄
+	document.querySelector('#btn').onclick = function() {
+		//alert('ok')
+		
+/* 		let myDate = new Date();
+		myDate.setFullYear	(frm1.y.value	 );
+		myDate.setMonth		(frm1.m.value - 1);
+		myDate.setDate		(frm1.d.value	 ); */
+		
+		// -1 넣은것이 보기 싫을경우 밑에 같이 처리 
+		let y = frm1.y.value;
+		let m = frm1.m.value;
+		let d = frm1.d.value;
+		let myDate = new Date(y + '/' + m + '/' + d);
+		
+		let weeks = ['일', '월', '화', '수', '목', '금', '토'];
+		//let weeks = new Array('일', '월', '화', '수', '목', '금', '토');
+		frm1.w.value = weeks[myDate.getDay()];
+		//alert(myDate);
+	}
+}
 
 </script>
 </head>

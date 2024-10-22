@@ -4,6 +4,28 @@
 <meta charset="UTF-8">
 <title> 이벤트 예제 2 </title>
 <script type="text/javascript">
+window.onload = function() {
+	// 망고랑 아보카도 select 태그 불러오기
+	let mango	= frm.mango;
+	let avocado = frm.avocado;
+	
+	// 망고랑 아보카도 가격 값 가져오기
+	var mango_price		= mango.getAttribute('data-price');
+	var avocado_price	= avocado.getAttribute('data-price');
+	
+	// select 태그의 이벤트 처리
+	mango.onchange	 = calc;
+	avocado.onchange = calc;
+	
+	// 총 가격계산
+	function calc() {
+		frm.total.value = mango.value * mango_price 
+						+ avocado.value * avocado_price;
+	}
+}
+
+
+
 </script>
 	
 </head>
@@ -19,7 +41,7 @@
 			<td> 망고 </td> 
 			<td> 4000원 </td>
 			<td>
-				<select name="mango" >
+				<select name="mango" data-price='4000'>
 					<option>0</option>
 					<option>1</option>
 					<option>2</option>
@@ -31,7 +53,7 @@
 			<td> 아보카도 </td> 
 			<td> 5000원 </td>
 			<td>
-				<select name="avocado" >
+				<select name="avocado" data-price='5000'>
 					<option>0</option>
 					<option>1</option>
 					<option>2</option>

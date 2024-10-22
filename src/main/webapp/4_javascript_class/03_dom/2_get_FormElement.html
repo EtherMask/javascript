@@ -13,8 +13,24 @@
 <script type="text/Javascript">
 	window.onload = function(){
     	document.getElementById('btn').onclick = function(){
-
- 
+			
+    		// [1] id로 찾기
+    		/* var username = document.getElementById('userName').value;
+    		var username = document.querySelector('#userName').value;
+    		var result = document.getElementById('result');
+ 			result.innerHTML = userName + '님 반갑'; */
+    		
+    		// [2] name 찾기 (단, form 필요)
+    		//var name = document.frm.username.value;
+ 			var name	= document.forms[0].username.value;
+ 			var result	= document.getElementById('result');
+ 			var age		= document.getElementById('age');
+ 			var age_attr = age.getAttribute('ages');
+ 			
+ 			result.innerHTML = name + '님 반갑 ' + age_attr + '살입니다';
+			 			
+ 			// [3] classname 찾기
+ 			
     	}
     }
 </script>
@@ -23,6 +39,7 @@
 <body>
 	<!-- 폼태그 안에 있는 입력값은 서버로 전송할 수 있다  -->
 	<form name="frm">
+		<div id='age' ages='100'></div>
 		당신의 이름은? <input type="text" id='userName' name='username' size="20">
 		<input type="button" value="확인" id='btn'>
    	</form>

@@ -2,14 +2,52 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> 이벤트 처리 취소</title>
+<title>이벤트 처리 취소</title>
+
+<style type="text/css">
+#outer {
+	background: #00FFFF;
+}
+
+#inner {
+	background: #87CEFA;
+}
+</style>
+
 <script>
 	/* 버블링 : 이벤트의 부모요소에 전달되는 단계
 	
 			- stopPropagation() : 이벤트 전달 취소
 			- preventDefault() : 이벤트 본래의 동작 취소
-	*/
+	 */
 
+	window.onload = function() {
+
+		var outer = document.getElementById('outer');
+		var inner = document.getElementById('inner');
+
+		outer.onclick = function() {
+			alert('outer 영역에서 이벤트 발생');
+		}
+		inner.onclick = function(evt) {
+			alert('inner 영역에서 이벤트 발생');
+			evt.stopPropagation();
+			evt.preventDefault();
+		}
+	}
+/*
+ 	[참고] 자바스크립트의 함수의 특성
+ 	
+ 	// 함수 선언
+ 	function method(a, b) {
+	
+	}
+	
+	// 함수 호출
+	method(1, 2);
+	method(1, 2, 3);	인자가 넘치게 들어올경우 안쓰면 넘치는걸 안받고 쓰면은 넘치는 인자값을 받는다
+	method(1);			인자가 부족한 경우 나머지 하나에 undefined가 뜬다 
+ */
 
 </script>
 </head>
@@ -17,7 +55,7 @@
 	<div id='outer'>
 		<p>바깥 부분</p>
 		<div id='inner'>
-			<a href='https://www1.president.go.kr/petitions'>안쪽부분</a>
+			<a href='https://www.nate.com'>안쪽부분</a>
 		</div>
 	</div>
 </body>

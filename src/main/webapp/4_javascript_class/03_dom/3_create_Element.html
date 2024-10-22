@@ -25,8 +25,39 @@
 		// 5. td 요소에 텍스트노드를 붙인다.
 		// 6. tr 요소에 생성한 td 요소를 붙인다.
 		// 7. 테이블요소에 tr요소를 붙인다.
+		let name = document.querySelector('#name').value;
+		let age  = document.querySelector('#age').value;
+		let tel	 = document.querySelector('#tel').value;
+		let addr = document.querySelector('#addr').value;
 		
-	
+		let tbl = document.querySelector('#listTable');
+		
+		// 태그만들기
+		let tr	= document.createElement('tr');
+		let td1	= document.createElement('td');
+		let td2 = document.createElement('td');
+		let td3 = document.createElement('td');
+		let td4 = document.createElement('td');
+		
+		// 입력값을 TextNode 만들기
+		let txt1 = document.createTextNode(name);
+		let txt2 = document.createTextNode(age);
+		let txt3 = document.createTextNode(tel);
+		let txt4 = document.createTextNode(addr);
+		
+		// 붙이기
+		// <td>텍스트</td>
+		td1.appendChild(txt1);	
+		td2.appendChild(txt2);
+		td3.appendChild(txt3);
+		td4.appendChild(txt4);
+		
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		tr.appendChild(td4);
+		
+		tbl.appendChild(tr);
 	}
 </script>
  </head>
@@ -36,15 +67,15 @@
 <form name="inForm" method="post">
 <table border = 1>
 	<tr>
-		<td width="80" align="center">Name</td>
-		<td width="50" align="center">Age</td>
-		<td width="100" align="center">Tel</td>	
+		<td width="80"  align="center">Name</td>
+		<td width="50"  align="center">Age</td>
+		<td width="100" align="center">Tel </td>	
 		<td width="250" align="center">Addr</td>
 	</tr>
 	<tr>
-		<td align="center"><input type="text" size="8" name="name" id="name"></td>
-		<td align="center"><input type="text" size="4" name="age" id="age"></td>
-		<td align="center"><input type="text" size="12" name="tel" id="tel"></td>
+		<td align="center"><input type="text" size="8"  name="name" id="name"></td>
+		<td align="center"><input type="text" size="4"  name="age"  id="age" ></td>
+		<td align="center"><input type="text" size="12" name="tel"  id="tel" ></td>
 		<td align="center"><input type="text" size="30" name="addr" id="addr"></td>
 	</tr>
 	<tr>

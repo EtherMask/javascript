@@ -5,20 +5,56 @@
 <title>Date 객체</title>
 <script type="text/javascript">	
  	
-	var d = new Date('2023/08/15');
+/* 	var d = new Date('2024/12/25');
 	document.writeln( d  + '<br/>');
 	document.writeln( d.getYear()  + '<br/>');
 	document.writeln( d.getFullYear()  + '<br/>');
-	document.writeln( d.getMonth()  + '<br/>');
-	document.writeln( d.getDate()  + '<br/>');
-	document.writeln( d.getDay()  + '<br/>');
+	document.writeln( d.getMonth() + '<br/>');
+	document.writeln( d.getDate() + '<br/>');
+	document.writeln( d.getDay() + '<br/>');
 
 
+	// 현재 날짜와 시간을 지정
+	var d = new Date();
+	// setter를 이용하여 날짜, 시간 지정
+	d.setFullYear(2024);
+	//d.setMonth(12); ->
+	d.setMonth(11);
+	d.setDate(25);
+	document.writeln( d  + '<br/>');
+	document.writeln( d.toLocaleString()  + '<br/>');
+	document.writeln( d.toGMTString()  + '<br/>');
+	document.writeln( d.toDateString()  + '<br/>');
 	
+	var today = new Date();
+	//today.setMonth(today.getMonth() + 3 );
+	today.setDate(today.getDate() + 20);
+	today.setHour(today.getHour() + 3);
+	today.setSeceond(today.getSeceond + 10);
+	document.writeln( today.toDateString()  + '<br/>');
+ */
 	
+	// --------------------------
+	// 날짜비교
+	const date1 = new Date('2024-10-21');
+ 	const date2 = new Date('2024-10-22');
 	
-	
-	</script>
+ 	console.log(date1 > date2);
+	console.log(date1 >= date2);
+	console.log(date1 < date2);
+	console.log(date1 <= date2);
+ 	
+	// [중요] 객체의 값이 같아도 객체이면 주소값이 다르기에 false다
+	// 그렇기에 년, 월, 일을 각각 비교하거나 getTime() 함수로 비교해야한다
+	const date3 = new Date('2024-10-21');
+ 	const date4 = new Date('2024-10-21');
+ 	console.log(date3 == date4);
+ 	console.log(date3 === date4);		// 잘못된 접근 방식들
+ 	console.log('>' + date3);
+ 	console.log('>' + date4);
+ 	console.log(date3.getTime() === date4.getTime());	// 옳은 접근 방식
+ 	
+ 	</script>
 
 </head>
 <body>
