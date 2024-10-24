@@ -4,13 +4,28 @@
 <meta charset="euc-kr">
 <title> window 예제 </title>
 <script type="text/javascript">
-
+window.onload = function() {
+	let choice	= frm.chooseSite;
+	
+	choice.onchange = function() {
+		
+/* 	
+		
+	//test();
+	}
+	// 정해진 시간 후에 호출할때
+	setTimeout(test, 1000); */	// 자바스크립트는 밀리초이다
+	
+		setTimeout(function() {		// 함수명 생략하기
+		location.href = choice.value
+		}, 1000);
+	};
+}
 		/*
 		1. 선택한 옵션의 값(value)을 얻어온다.
 		2. location 객체의 href 프로퍼티에 url을 지정
 		*/
-
-
+		
 </script>
 </head>
 <body>

@@ -15,9 +15,9 @@
 		document.writeln('기본형 인자 2> ' + pri  +"<br/>");
 
 		// 참조형 파라메터 인자 ( call by reference )
-		var ref = [ 1, 2, 3, 4, 5 ];
+		var ref = [ 1, 2, 3, 4, 5 ];	// 주소를 복사했다보니 원본에 영향을 미친다
 		function refParam ( rvalue ){
-			rvalue.pop();
+			rvalue.pop ();
 			return rvalue;
 		}
 		document.writeln('참조형 인자 1> ' + refParam( ref ) +"<br/>");
@@ -28,6 +28,6 @@
 
 <body>
 
-  
- </body>
+ 
+</body>
 </html>

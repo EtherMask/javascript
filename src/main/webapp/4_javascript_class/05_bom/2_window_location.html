@@ -27,7 +27,33 @@
 <meta charset="UTF-8">
 <title> window 예제 </title>
 <script type="text/javascript">
-
+window.onload = function() {
+	
+	/* 
+		새로운 창 띄우기
+		window.open("경로", "창이름", "옵션");
+	*/
+/* 		frm.chooseSite.onchange = function() {
+		//window.open(this.value, '내창', 'width = 500, height = 400');
+		window.open(frm.chooseSite.onchange.value, '내창', 'width = 500, height = 400'); */;
+	
+		let choice = frm.chooseSite;
+		choice.onchange = function() {
+		//window.open(choice.value, '내창', 'width = 500, height = 400');
+		
+		const popWidth = 500;
+		const popHeight = 400;
+		const left = (screen.availWidth - popWidth)/2;
+		const top = (screen.availHeight - popHeight)/2;
+		
+		window.open(choice.value, '내창', 
+				`width=${popWidth} height=${popHeight} left=${left} top=${top}`);
+		/* [장난]
+				1초마다 팝업 창을 제목줄이 겹치지 않게 5개 띄우기
+		*/
+		
+	}
+}
 	
 </script>
 </head>

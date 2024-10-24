@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta charset="UTF-8">
+<title> DOM에서 노드 추가  </title>
+<script src='../lib/jquery-3.7.1.js' type="text/javascript"></script>
+<script type="text/javascript">
+// window.onload = function(){};
+$(function(){
+	// 버튼 클릭이벤트 처리
+	$('#bInsert').click(function(){
+	
+	// 입력창에서 입력값들 가져오기
+	let name= $('#name').val();
+	let age = $('#age').val();
+	let tel	= $('#tel').val();
+	let addr= $('#addr').val();
+	
+	// 새로운 행 추가
+	let row = `<tr>
+	<td align="center">${name}
+	<td align="center">${age}
+	<td align="center">${tel}
+	<td align="center">${addr}
+	</tr>`;
+	
+	// 테이블에 추가
+    $('#listTable').append(row);
+    
+    // 입력 필드 비우기
+    $('#name').val('');
+    $('#age').val('');
+    $('#tel').val('');
+    $('#addr').val('');
+	});
+});
+</script>
+</head>
+<body>
+
+<h2> 고객정보 입력 </h2>
+<form name="inForm" method="post">
+<table border = 1>
+	<tr>
+		<td width="80"	align="center">Name</td>
+		<td width="50"	align="center">Age</td>
+		<td width="100" align="center">Tel</td>	
+		<td width="250" align="center">Addr</td>
+	</tr>
+	<tr>
+		<td align="center"><input type="text" size="8" name="name" id="name"></td>
+		<td align="center"><input type="text" size="4" name="age" id="age"></td>
+		<td align="center"><input type="text" size="12" name="tel" id="tel"></td>
+		<td align="center"><input type="text" size="30" name="addr" id="addr"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"> 
+			<input type="button" value="입력" id='bInsert' >
+		</td>
+	</tr>
+</table>
+<hr>
+<h2> 고객정보 목록보기  </h2>
+<table border='1' id="listTable">
+	<tr>
+		<td width="80"	align="center">Name</td>
+		<td width="50"	align="center">Age</td>
+		<td width="100" align="center">Tel</td>	
+		<td width="250" align="center">Addr</td>
+	</tr>
+</table>
+
+</form>
+</body>
+</html>

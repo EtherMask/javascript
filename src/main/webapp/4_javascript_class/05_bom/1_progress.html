@@ -14,10 +14,15 @@
 	var progress = document.getElementById("progress");
 	var current = 0;
 
-	
-	
+	let interval = setInterval(
+		function() {
+		progress.value = current++;
+		if(current > 100) {
+			clearInterval(interval);
+		}}, 100);
 	
 
+	
 	/* [참고]
 	window.setInterval(func, time) : time 시간 간격으로 반복 처리를 한다
 	window.setTimeout(func, time) : 지정된 시간이 경과 했을 때 한 번만 처리한다

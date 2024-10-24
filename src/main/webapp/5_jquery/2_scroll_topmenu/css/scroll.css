@@ -1,0 +1,16 @@
+/* intro 문단에 스크롤 만들기 */
+#intro {
+	height : 100px;
+	width : 400px;
+	overflow : scroll;
+}
+
+/* 내비게이션 메뉴를 움직이는 것처럼 보이게 */
+#navigation {
+	position : relative;
+}
+
+
+#content {
+	height : 1000px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>00_object.html</title>
+
+<!-- 함수도 리터럴이다 -->
+
+<script type="text/javascript">
+
+/*	객체리터럴 
+ *		` 장점 : 별도의 클래스 구조없이 객체 작성 가능하고 구성이 자유롭다
+ *		` 단점 : 구조가 정의한 적이 없다는 것은 구조 파악이 어렵다(재사용이 어렵다)
+ */
+
+/* 	let member = {	// 클래스안에있는 멤버 함수나 멤버 변수들은 let이나 var 쓰면안된다
+		  name : '홍길동'
+		, birth : '2000-01-01'
+		, output : function() {
+			return this.name + "/생일: " + this.birth + '<br/>';
+		}
+		// output(){
+		//	return this.name + "/생일: " + this.birth + '<br/>';
+		//} 
+	}; 
+	
+	document.write(member.output());
+	document.write(member['output']()); */
+	
+
+	let obj1 = {
+			name: '홍길순',
+			age	: 44,
+	};
+
+	obj1.display = function() {
+		return this.name + '님 ' + this.age + '살입니다<br/>';
+	};
+	document.write(obj1.display());
+	
+	
+//	let obj2 = {};
+	let obj2= new Object();
+	obj2.name = '홍길자';
+	obj2.age = 33;
+	obj2['display'] = function() {
+		return this.name + '님 ' + this.age + '살입니다<br/>';
+	};
+	document.write(obj2['display']());
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

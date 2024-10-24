@@ -7,8 +7,23 @@
 <body>
 <script>
 
+/*	[참고]
+ *	(1) 함수
+ *		- 선언
+ *			function() {} 
+ *		- 호출
+ *			func();
+ *
+ *	(2) 클래스
+ *		- 선언
+ *			function Func() {}
+ *		- 객체 생성
+ *			var a = new Func();
+ *
+ */
+ 
 //0. 	클래스 선언 -  생성자로 초기화하기
-function Student(id, name, dept){
+/* function Student(id, name, dept){
 	this.id = id;
 	this.name = name;
 	this.dept = dept;
@@ -25,7 +40,46 @@ var kim = new Student("001","김길동", "컴공");
 var lee = new Student("002","이길동", "경영");
 
 document.write( kim.display() );
-document.write( lee.display() );
+document.write( lee.display() ); */
+
+/*	[여구사항]
+ 	 Student 클래스 선언
+ 	 생성자로 이름, 국어, 영어, 수학점수를 받아서 멤버변수로 초기화
+ 	 멤버함수로 sum() 구현 : 전체 과목을 더한 값을 리턴
+ */
+//function Stundet(name, korean, english, math) {
+	let Student = function(name, korean, english, math) {
+		this.name = name;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		 
+		this.sum = function() {
+			return korean + english + math;
+		}
+	};
+
+let kim = new Student('김길동', 98, 67, 49);
+let park = new Student('박길동', 77, 99, 26);
+
+document.write(kim.name + '님은 ' + kim.sum() + '점입니다<br/>');
+document.write(park.name + '님은 ' + park.sum() + '점입니다<br/>');
+
+// kim객체에 동적인 추가
+/* kim.showInfo = function() {
+	return this.name + '==>' + this.sum();
+}; */
+
+// Student 클래수에 동적으로 추가 (prototype)
+Student.prototype.showInfo = function() {
+	return this.name + '==>' + this.sum() + '<br/>';
+};
+
+document.write(kim['showInfo']());
+
+// 에러발생 : kim객체에 추가했기에 park객체에는 없음
+
+document.write(park['showInfo']());
 
 </script>
 </body>

@@ -6,26 +6,30 @@
 <script>
  
 	// @ 0. 함수는 인자의 갯수를 체크하지 않는다
-	
- 
  
 	// @ 1. 인수의 기본값(default) 지정
-   	function multiple( first, second )
+   	function multiple(first, second = 1) // 값이 안들어올때만 1로 처리
 	{
 		return first * second;
 	}
 	document.writeln('곱은 ' +  multiple( 3, 4 ) + '<br/>'  );
-	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );
-	document.writeln('곱은 ' +  multiple( 3 ) + '<br/>' ); 
-	
+	document.writeln('곱은 ' +  multiple( 3, 4, 5 ) + '<br/>'  );	//5는 사라짐
+	document.writeln('곱은 ' +  multiple( 3 ) + '<br/><hr/>' ); // second에 undefined가 뜨며 NaN
 
-	
-	
 	// @ 2. 가변길이 인수(...)
-
-	 
-		 
- 
+	function sum(...nums) {
+		let result = 0;
+		//합산
+		for(let num of nums) {
+			result += num;
+		}
+		return result;
+	}
+	document.write('합은 ' + sum(1, 2, 3) + '<br/>');
+	document.write('합은 ' + sum(1, 2, 3, 4, 5) + '<br/>');
+	document.write('합은 ' + sum(1 ,2, 3, 4, 5, 6) + '<br/>');
+	
+	
 </script>
 </head>
 <body>

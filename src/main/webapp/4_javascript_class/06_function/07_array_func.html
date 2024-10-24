@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07_array_func.html</title>
+<script type="text/javascript">
+
+	/*
+		배열.forEach(function(요소의 값, 인덱스 번호, 원배열) {});
+	*/
+	
+	var data1 = ['강 ', '김 ', '길'];
+	
+	data1.forEach(function(fname, idx, array) {
+		document.write (idx + ':' + fname + '=>' + array +'<br/>');
+	}); //배열에서 하나씩 빼서 함수에 요소를 넣어준다
+	document.write('<hr/><hr/>');
+	data1.forEach(function(fname, idx) {	// 인덱스나 원배열 값이 필요없으면 안받아도된다
+		document.write (idx + ':' + fname + '<br/>');
+	});
+	/* 배열.map(function(요소의 값, 인덱스 번호, 원배열) {}) */
+	var data2 = ['강 ', '김 ', '길'];
+	//data2.map(function(fname, idx, array) {
+	var result = data2.map(function(fname) { 
+		document.write(fname +'<br/>');
+		return fname*fname;
+		})
+	document.write('결과:' + result);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

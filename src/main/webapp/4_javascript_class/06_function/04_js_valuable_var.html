@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 변수와 범위</title>
+	<script>
+
+	// 1. 글로벌 변수와 지역 변수
+/* 	var scope = '글로벌변수';
+	function getValue() {
+		var scope = '지역변수';
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>'); // 함수를 벗어나면 사라지므로 다른데에서 사용불가
+	document.write('2>' + scope + '<br/>'); */	 // 함수 밖에 있어서 다른데에서 사용가능
+	
+	// 2. [권장하지 않음] var 생략가능 => 글로벌변수로 취급
+/* 	scope = '글로벌변수';
+	function getValue() {
+		scope = '지역변수';
+		test = '테스트';
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>');	
+	document.write('2>' + scope + '<br/>');	
+	document.write('3>' + test + '<br/>'); */
+	
+	// 3. 지역변수는 반드시 var 선언
+	// 		=> 지역변수는 반드시 함수 앞단에 선언하기
+	/*
+		[호이스팅:끌어올리기]
+		
+	*/
+/* 	scope = '글로벌변수';
+	function getValue() {
+		// 호이스팅때문에 변수는 선언이 됬지만 값은 나중에 들어와서 undefined가 뜬다
+		document.write('0>' + scope + '<br/>');
+		
+		var scope = '지역변수';
+		
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>');	
+	document.write('2>' + scope + '<br/>');	
+	 */
+	 
+	// 4. var 지역변수는 함수블록에서만 유효하다
+	function test() {
+		var a = 10;
+	}
+	//document.wrtie('a=' + a + '<br/>');
+	
+	if(true) {
+		var b = 20;		// 함수가 아니라서 글로벌 변수라 값이 출력됨
+	}
+	document.write('b=' + b +'<br/>');
+	
+	for(var i=0; i<3 ; i++) {
+		
+	}
+	for(var i=0; i<5 ; i++) {
+		
+	}
+	document.write('i=' + i +'<br/>');
+	
+	</script>
+</head>
+
+<body>
+
+  
+ </body>
+</html>

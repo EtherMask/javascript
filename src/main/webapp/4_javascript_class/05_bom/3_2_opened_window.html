@@ -5,7 +5,16 @@
 <title> 새로 열려진 창 </title>
 <script type="text/javascript">
 
-
+window.onload = function() {
+	let choice = frm.site;	// 값이 여러개이기에 배열
+	for(let i=0; i<choice.length; i++) {
+		choice[i].onclick = function() {
+			//alert(this.value);
+			opener.location.href = this.value;
+		}
+	}
+	
+}
 
 </script>
 </head>

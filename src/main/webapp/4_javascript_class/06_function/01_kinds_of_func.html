@@ -4,7 +4,27 @@
 	<meta charset="UTF-8">
 	<title>자바스크립트 함수 만들기</title>
 	<script>
+	// 1. function 명령어
+	function first() {
+		let txt = document.getElementById('first');	
+		txt.style.background = 'skyblue';
+		txt.style.color = 'white';
+	}
 	
+	// 2. 함수 리터럴
+	let second = function() {
+		let text = document.querySelector('#second');
+		text.style.background = 'black';
+		text.style.color =	'yellow';
+	}
+	
+	// 3. 애로우 함수
+	let third = three => {
+		let texts = document.querySelector('#third');
+		texts.style.background = 'purple';
+		texts.style.color = 'skyblue';
+		
+	}
 	
 	</script>
 </head>
@@ -16,7 +36,7 @@
 	<p> <span id="second"> 2. 함수 리터럴 </span>
 		<input type="button" value="확인" onclick="javascript:second()"/>
 	</p>
-	<p> <span id="fourth"> 3. 애로우 함수 </span>
+	<p> <span id="third"> 3. 애로우 함수 </span>
 		<input type="button" value="확인" onclick="javascript:third()"/>
 	</p>
 </body>

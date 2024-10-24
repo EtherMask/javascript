@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_3_first.html</title>
+<script type="text/javascript">
+
+window.onload = function() {
+	sec = window.open('3_3_seceond.html', 
+		 'city', 'width = 500 height = 400');
+	
+	let jiyeok = frm.jiyeok;
+
+		jiyeok.onclick = function() {	// 불러올것이 하나일 경우 반복문 쓰지 않기
+			sec.fm.result.value = this.value;
+		
+		let city = sec.fm.city;
+		for(let c=0; c < city.length; c++) {
+			switch(this.value){
+			case '서울시':
+				city[0].checked = true;	//radio는 selected가 아닌 checked 사용
+				break;
+			case '경기도':
+				city[1].checked = true;
+				break;
+			case '인천':
+				city[2].checked = true;
+				break;
+			}
+		}
+	}
+}
+</script>
+</head>
+<body>
+<form name='frm'>
+	<select name='jiyeok'>
+		<option>서울시</option>
+		<option>경기도</option>
+		<option>인천</option>
+	</select><br/>
+	<input type='text' name='city' size='20'>
+</form>
+</body>
+</html>

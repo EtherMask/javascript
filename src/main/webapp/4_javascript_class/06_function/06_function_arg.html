@@ -8,9 +8,16 @@
 	//----------------------------------------------------------
 	//  함수이름도 인수(파라메터)가 될 수 있다. ( 고차함수 : higher-order function )
 	
-	
-	
-	
+	function testFunc(arg) {
+		var data = frm.num;
+		if(arg == 'sum') {
+			arrayProcess(data, sum);	// [주의] sum 문자열아님
+			alert('합계: ' + sumResult);	
+		}else if(arg == 'square') {
+			arrayProcess(data, square);
+			alert('제곱: ' + squareResult);
+		}
+	}
 	</script>
 </head>
 <body>

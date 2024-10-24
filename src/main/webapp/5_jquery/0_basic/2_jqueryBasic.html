@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title> 첫 연습 </title>
+
+<style type="text/css">
+	.active {
+		border: 3px solid red;
+		outline : 3px solid red;
+	}
+
+
+</style>
+<script src='../lib/jquery-3.7.1.js' type="text/javascript"></script>
+<script type="text/javascript">
+
+$(function(){
+/*	//----------------------- (1)
+ 	$('.man').css({'background' : '#FFD700'});
+	$('.woman').css({'color' : '#D4AF37'});
+*/
+	
+	//----------------------- (2)
+/* 	let redBox = $('.inputText');
+	redBox.focus(function(){
+		$(this).addClass('active');
+	})
+	
+	// focus <-> blur
+	redBox.blur(function(){
+		$(this).removeClass('active');
+	}); */
+
+	//--------------------- (3)
+	// 자바스크립트 : innerHTML
+	// 제이쿼리	 : text() / html()
+
+	// 제이쿼리 setter()/getter() => 동일함 함수
+	//	`text()		: getter() 역할
+	//	`text(인자)	: setter() 역할
+	
+	//alert($('#divText').text());
+/* 	$('#divText').text('<img src="images/grim.jpg">')	//setter, 글씨로 인식
+	$('#divHtml').html('<img src="images/grim.jpg">')	//setter, 태그로 인식
+	
+	$('#divEmpty').empty();
+	$('#changeGrim').click(function(){
+		$(this).attr('src', 'images/cat.jpg');			// 속성 변경
+	});
+	 */
+	 
+/* 	 $('#changeGrim').hover(function(){
+		 $(this).attr('src', 'images/cat.jpg');		// 마우스가 올라갔을때 고양이로 이미지 변경
+	 }, function(){
+		 $(this).attr('src', 'images/puppy.jpg');	// 마우스가 내려갔을때 강아지로 이미지 변경
+	 });*/
+	  
+	 //------------------------------------- (4)
+	 
+	 //------------------------------------- (5)
+	let actor	= $('#actor');
+	let tae		= $('#tae'	);
+	let su		= $('#su'	);
+	let bin		= $('#bin'	);	
+	
+	actor.append(tae);
+	su.appendTo(actor);
+	
+	actor.append('<div>한배우</div>')
+	$('<div>박배우</div>').appendTo(actor);
+	
+	let n = $('<div/>');	// 새로운 <div> 객체 생성
+	n.text('최배우')			// <div>최배우</div>
+	actor.append(n);
+});	
+
+	
+</script>
+
+<!-- 
+	[중요]
+	
+	var n = $('#div');	// <요소 id='div'/>
+	var n = $('.div');	// <요소 class='div'/>
+	var n = $('div');	// <div></div> 요소
+	
+	------------------------------
+	vr n $('<div/>');	// div 새로운 객체 생성
+
+ -->
+</head>
+<body>
+	<!--  1 -->
+	<ul>
+		<li class="man">김수현</li>
+		<li class="woman">김희애</li>
+		<li class="woman">송혜교</li>
+		<li class="man">하정우</li>
+		<li class="woman">김태희</li>
+	</ul>
+	<!-- 2 -->
+	<input type="text" class="inputText"/>
+	<input type="text" class="inputText"/>
+	<input type="text" class="inputText"/>
+	
+
+	<!-- 3 -->
+		<div id="divText">여기에 글씨를</div>
+		<div id="divHtml">여기에 그림을</div>
+		<div id="divEmpty">여기를 비움</div>
+		<p>
+		<img src="images/puppy.jpg" id='changeGrim'>
+		</p>
+		
+	<!-- 4 -->	
+		<p>
+		이름 : <input id="tf" type="text" size="20" /><br/>
+		메세지 : <textarea id="ta" rows="3" cols="20"></textarea><br/>
+		주소 : <select id="sel">
+			<option value="seoul">서울</option>	<!-- option에 value 값 없어도 됨 -->
+			<option value="busan">부산</option>
+			<option value="masan">마산</option>
+			<option value="incheon">인천</option>
+		</select>
+		<select id="sel_m" multiple="multiple">
+			<option value="seom1">제주도</option>
+			<option value="seom2">울릉도</option>
+			<option value="seom3">독도</option>
+			<option value="seom4">거제도</option>
+		</select><br/>
+		<input type='button' id='check' value='확인'/>
+		<input type='button' id='init' value='초기화'/> 
+		<div id='result'></div>
+		</p>
+		
+	<!-- 5 -->
+		<div id="actor">배우</div>
+		<div id="tae">김태희</div>
+		<div id="su">김수현</div>
+		<div id="bin">현빈</div>
+
+
+	<!-- 6 -->
+		<div class="data">이름</div>
+		<div class="data">직업</div>
+		<div class="data">나이</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+	color: #3E3E3E;	
+	font-size: 12px;
+}
+
+p {
+	padding: 5px;
+}
+
+a {
+	color: #3687AF;
+}
+
+h2 {
+	border-bottom:2px solid #015287;
+	color: #D15600;
+	padding-top: 10px;
+	margin-top: 0;
+}
+
+/* */
+#container{
+	margin:0 auto;
+	text-align: left;
+	width: 650px;
+}
+
+#header{
+	height: 60px;
+	color: #172322;
+	background: transparent url(../images/header-corners.png) no-repeat bottom left;
+}
+
+#header h1
+{
+	padding:0;
+	margin:0;
+}
+
+#content{
+	background-color: #fff;
+	padding: 0 15px 10px 15px;
+
+} 
+
+#intro{
+	width: 450px;
+}
+
+#footer{
+	background-color: #fff;
+	padding:15px;
+  clear: both;
+}
+
+/* */
+table {
+	border-collapse:collapse;
+	font-size:12px;
+	margin:0 20px 20px 20px;
+	border-top:2px solid #015287;
+	width:480px;
+}
+
+th {
+	border-bottom: 2px solid #015287;
+	color: #D15600;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+	padding: 3px 8px;
+}
+
+td {
+	padding: 6px;
+}
+
+/* li요소를 오른쪽으로 배치 */
+#navigation{
+	float: right;
+	width: 150px;
+}
+
+
+/*-----------------------------------------------------*/
+/* jquery로 클래스를 추가하기 위한 CSS 클래스 */
+/*-----------------------------------------------------*/
+/* 테이블에 줄바꿔 스타일 지정할 때 */
+.table_striping {
+	background-color : #dddddd;
+	color : #666666
+}	
+
+/*-----------------------------------------------------*/
+/* 테이블에 마우스 오르면 강조 */
+tr.td_mouseover {
+	background-color : #fffacd;
+}

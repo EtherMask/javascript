@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트 변수와 범위</title>
+	<script>
+
+	// 1. 글로벌 변수와 지역 변수
+/*  	let scope = '글로벌변수';
+	function getValue() {
+		let scope = '지역변수';
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>'); // 함수를 벗어나면 사라지므로 다른데에서 사용불가
+	document.write('2>' + scope + '<br/>');  */	 // 함수 밖에 있어서 다른데에서 사용가능
+	
+	// 2. [권장하지 않음] var 생략가능 => 글로벌변수로 취급
+/* 	scope = '글로벌변수';
+	function getValue() {
+		scope = '지역변수';
+		test = '테스트';
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>');	
+	document.write('2>' + scope + '<br/>');	
+	document.write('3>' + test + '<br/>'); */
+	
+	// 3. 지역변수는 반드시 var 선언
+	// 		=> 지역변수는 반드시 함수 앞단에 선언하기
+	/*
+		[호이스팅:끌어올리기]
+		
+	*/
+/*  	scope = '글로벌변수';
+	function getValue() {
+		// let을 쓰면 호이스팅이 안되서 error가 뜬다
+		document.write('0>' + scope + '<br/>');
+		
+		let scope = '지역변수';
+		
+		return scope;
+	}
+	document.write('1>' + getValue() + '<br/>');	
+	document.write('2>' + scope + '<br/>');	 */
+	
+	 
+	// 4. var 지역변수는 함수블록에서만 유효하다, let도 동일
+/* 	function test() {
+		let a = 10;
+	}
+	document.wrtie('a=' + a + '<br/>'); */
+	
+/* 	if(true) {
+		let b = 20;		// let이라서 출력이 안됨
+	}
+	document.write('b=' + b +'<br/>'); */
+	
+	for(let i=0; i<3 ; i++) {
+		
+	}
+	for(let i=0; i<5 ; i++) { //var일 경우 덮어져서 밑의 반복문이 가동하나 let일 경우 중복이 안되서 불가
+		
+	}
+	document.write('i=' + i +'<br/>');
+	
+	</script>
+</head>
+
+<body>
+
+ </body>
+</html>

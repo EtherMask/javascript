@@ -5,13 +5,60 @@
 	<title>자바스크립트 함수 3가지</title>
 	<script>
 	// 1. function 명령(선언)
+/* 	function triangle(base, height) {
+		return base*height/2;
+	}
+	
+	document.write('삼각형의 넓이는 ' + triangle(2, 3) + '<br/>');
+	 */
+	// 2. 함수리터럴   * 리터럴 : 변수의 값		
+/*	var triangle = function(base, height) {	//함수내 코딩은 밀어서 써서 함수내에 있다는걸 표현하면 좋다
+						return base*height/2;	
+					};
+	document.write('삼각형의 넓이는 ' + triangle(2, 3) + '<br/>');
+	 */
+	// 3. 애로우함수
+/* 	let triangle = (base, height) => {
+										return base*height/2;	
+									};
+									
+	document.write('삼각형의 넓이는 ' + triangle(2, 3) + '<br/>'); */
+	
+/* 	const func = (arg) => {
+		return arg * 100;
+	}
+	document.write('화살표함수 : ' + func(2) + '<br/>'); */
+	
+	// 화살표함수에서 인자가 1개인 경우는 () 생략가능
+/* 	const func = arg => {
+		return arg * 250;
+	} */
+	
+	// 함수안의 코드가 return 만 있는 경우 {}와 return 생략가능
+/* 	const func = arg => arg * 500;
+	
+	document.write('화살표함수 : ' + func(2) + '<br/>'); */
+	
+	// 1. function 명령어
+/* 	function add(a, b) {
+		return a + b;
+	}; */
+	
+	// 2. 함수 리터럴: 변수의 값
+/*  	let add = function(a, b) {
+		return a + b;
+	}; */
+	
+	// 3. 애로우함수
+/*  	let add = (a, b) =>{
+		return a + b;
+	};  */
+	
+	let add = (a, b) => a + b;
 
 	
-	// 2. 함수리터럴   * 리터럴 : 변수의 값		
-
-
-	// 3. 애로우함수
-
+	const result = add(9, 10);
+	document.write('결과: ' + result);
 	
 	</script>
 </head>

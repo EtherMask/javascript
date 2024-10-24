@@ -12,6 +12,52 @@
 //			호출되는 함수가 참조하는 함수의 메모리 공간을 참조한다. (?)
 //			아무튼 클로저를 이용하여 전역변수의 사용을 줄일 수 있다
 
+/* 옛날방식
+function closure(init) {
+	
+}
+ */
+
+/* 
+let closure = function(init) {
+	var total = init;
+	
+	return function(){
+		return ++total;
+	}
+} 
+*/
+/* 
+let myClosure = function(init) {
+	var total = init;
+	
+	return function(){
+		return ++total;
+	}
+}(1);
+document.write(myClosure() + '<br/>');
+document.write(myClosure() + '<br/>');
+document.write(myClosure() + '<br/>');
+document.write(myClosure() + '<br/>');
+*/
+
+let addClosure = function() {	// 즉시 실행시키면 addClosure는 함수가 아니라 리턴값을 받는애가 된다
+	let total = 0;
+	
+	return function(num) {
+		total += num;
+		return total;
+	};
+}();
+
+document.write(addClosure(1) + '<br/>');
+document.write(addClosure(2) + '<br/>');
+document.write(addClosure(3) + '<br/>');
+document.write(addClosure(4) + '<br/>');
+
+
+
+
 
 </script>
 </head>

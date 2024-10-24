@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title> Javascript 객체지향  - 상속 </title>
+<meta charset="UTF-8">
+<title>Javascript 객체지향 - 상속</title>
 </head>
 <body>
 	<script>
 		// 부모클래스
-		var Animal = function(){ };
+		var Animal = function(){};
 		Animal.prototype = {
 			sound : function(){
 				document.writeln('울부짖다 <br/>');
@@ -18,9 +18,36 @@
 		};
 
 		// 자식클래스
+		let Dog = function() {};
+		Dog.prototype = new Animal();	// Animal객체를 상속
+		
+		let dog = new Dog();
+		dog.sound();
+		dog.move();
+		
+		// 오버라이딩(overriding)
+		Dog.prototype.sound = function(){
+			document.write('멍멍 짖다<br/>');
+		};
+		dog.sound();
 
-
-
-	</script>
+		// Human 클래스 - Animal 상속
+		//	move(): '인간은 달린다' 수정
+		//	walk(): '인간은 두발로 걷는다' 추가
+		let Human = function() {};
+		Human.prototype = new Animal(); // 상속
+		 
+		let human = new Human();
+		Human.prototype.move = function() {
+			 document.write('인간은 달린다 <br/>');
+			}
+		Human.prototype.walk = function() {
+			document.write('인간은 두발로 걷는다 <br/>');
+			}
+		
+		human.sound();
+		human.move();
+		human.walk();
+</script>
 </body>
 </html>

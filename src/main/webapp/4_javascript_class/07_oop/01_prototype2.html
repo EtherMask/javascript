@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Javascript 객체지향 </title>
+</head>
+<body>
+<script>
+	let Student = function(name, korean, english, math) {
+		this.name = name;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		
+	};
+/* 
+Student.prototype.sum = function() {
+	return this.korean + this.english + this.math;
+};
+
+Student.prototype.showInfo = function() {
+	return this.name + '==>' + this.sum() + '<br/>';
+};
+ */
+Student.prototype = {
+		sum : function() {
+			return this.korean + this.english + this.math;
+	},
+		showInfo : function() {
+			return this.name + '==>' + this.sum() + '<br/>';
+	}
+};
+let kim = new Student('김길동', 98, 67, 49);
+let park = new Student('박길동', 77, 99, 26);
+
+document.write(kim.name + '님은 ' + kim.sum() + '점입니다<br/>');
+document.write(park.name + '님은 ' + park.sum() + '점입니다<br/>');
+
+document.write(kim['showInfo']());
+document.write(park['showInfo']());
+
+</script>
+</body>
+</html>

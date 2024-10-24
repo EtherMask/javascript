@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<title>스타트래커!</title>
+	
+	<link rel="stylesheet" href="css/base.css" type="text/css" media="screen" charset="utf-8"/>
+	<link rel="stylesheet" href="css/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" charset="utf-8"/>
+
+<script type="text/javascript">
+/** tabs 위젯의 주요 파라메타
+
+active : 열어둔 패널의 인덱스 번호 ( default : 0 )
+collapsible : 패널이 접히는 것을 가능하게 할 것인가  ( default :  false )
+disabled : 무효화할 탭  ( default :  false )
+			( true로 모든 탭을 무효화 또는 [0,1]과 같이 배열로 특정의 탭만을 무효화하는 것도 가능.)
+event : 탭을 활성화하기 위한 이벤트  ( default :  click )
+heightStyle : 각 패널의 높이 
+ 			auto - 가장 높은 패널에 맞춘다
+ 			fill - 부모 요소에 맞춘다
+ 			content  : 각각의 높이에 맞춘다  ( default )
+hide : 패널을 비표시로 할 때의 애니매이션 효과 (true/false)
+show : 패널을 표시할 시간의 애니메이션 효과
+*/
+
+</script>
+
+</head>
+<body>
+	<div id="container">
+    <div id="header">
+      <h1>스타파헤치기</h1>
+    </div>
+    <div id="content">
+      <h2>
+        환영합니다!
+      </h2>
+
+      <div id="info">
+        <ul id="info-nav">
+          <li><a href="#intro">소개</a></li>
+          <li><a href="#about">회사에 대해</a></li>
+          <li><a href="#disclaimer">경고</a></li>
+        </ul>
+        <div id="intro">
+  			<p>
+  				최고의 유명인을 추적하고 살펴볼 수 있는 <strong>스타트래커!</strong>에 오신 것을 환영합니다. 세계 제 1의 밴드나 음악가 또는 프로듀서가 옆 동네 어느 곳에 있는지 궁금하신가요? 바로 여기서 그 궁금증을 해결할 수 있습니다. 여기서 이번 주에는 아주 특별한 유명인의 정보를 제공할 것입니다. 서두르세요!
+  			</p>
+        </div>
+		<div id="about">
+			 <p>
+			  스타트래커!는 로스엔젤레스 출신의 어느 젋은 사업가가 GPS기능이 있는 RFID 태그를 사람들이 모르게 사람에게 붙일 수 있는 방법을 발견한 2009년 초에 설립됐습니다. 사업가는 로스엔젤레스 출신이었으므로 사업가의 첫 번째 생각은 이 기술을 이용하여 팬이 그들의 유명인의 위치를 추적하고 알 수 있게 만들었습니다. 그리고 이런 유행은 널리 퍼지게 됐습니다.
+			</p>
+		</div>
+		<div  id="disclaimer">
+			<p>
+				경고! 이 사이트는 범죄를 위한 사이트가 아닙니다. 유명인사들의 사생활도 보호받아야 합니다.
+			</p>
+		</div>
+      </div>
+      
+     </div>
+
+		<div id="footer">
+			<p>
+				&copy; Copyright 2010 유명인추적 프로덕션
+			</p>
+		</div>
+	</div>
+</body>
+</html>

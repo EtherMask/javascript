@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript">
-
+	window.onload =function() {
+	let gd = fm.gender;
+	for(let a=0; a<gd.length ; a++) {
+		gd[a].onclick = function() {
+			parent.frm.result.value = this.value;
+		}
+	}
+}
 </script>
 <title></title>
 </head>

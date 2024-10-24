@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <title> 부분독립페이지 </title>
 <script type="text/javascript">
+window.onload = function() {
+	
+	let choice = frm.site;
+	for(let i =0; i<choice.length ;i++) {
+		choice[i].onclick = function() {
+			ifrm.fm.result.value = this.value;
+		}
+	}
+}
 
 </script>
 </head>

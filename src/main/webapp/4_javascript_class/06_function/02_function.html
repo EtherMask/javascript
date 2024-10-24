@@ -6,29 +6,73 @@
 </head>
 <body>
 	<script>
-
+	
+	//**** ★ [결론] 함수 선언을 호출 전에 하자 ★
+	
+	// [ 호이스팅 개념을 모르는 경우 ]
 	// @ function 명령은 정적인 구조이고, 
 	// @ 함수리터럴과 화살표함수는 실행시 판단한다.
-
+	
 	/*
+		호이스팅(hoisting: 끌어올리다)
+	*/
+	
+/* 	document.writeln('1. 삼각형의 면적은 :' +  triangle(4,3) + '<br/>');
 	function triangle ( base, height ){
-		return base * height / 2;
+		return base * height / 2;	// triangle 호이스팅으로 인해 에러x
+	} */
+	
+/* 	var triangle2 = function( base, height ){
+		return base * height / 2; // triangle2 함수가 뒤에있으면 리터럴이라 호이스팅이 안되서 에러	
 	}
-	document.writeln('삼각형의 면적은 :' +  triangle(4,3) + '</br>');
-	*/
+	document.writeln('삼각형의 면적은 2: ' +  triangle2(4,3) + '<br/>'); */	
 	
-	/*
-	var triangle2 = function( base, height ){
-		return base * height / 2;
-	}	
-	document.writeln('삼각형의 면적은 2: ' +  triangle2(4,3) + '</br>');		
-	*/
+	// @ 함수는 데이터형의 일종이다. -> 함수리터럴: 변수의 값
+	var triangle = function( base, height ){
+		return base * height / 2; 	
+	}
 	
+/*	document.writeln('삼각형의 면적은 2: ' +  triangle(4,3) + '<br/>');
 	
+	document.write('함수: ' + triangle + '<hr/>'); //소괄호를 안쓰면 변수의 값만 본다
 	
-	// @ 함수는 데이터형의 일종이다.
+	triangle = '문자로 변환';
 	
+	document.write('문자: ' + triangle + '<hr/>'); */	// 문자열 출력됨
 	
+	function doA() {
+		document.write('함수 A 실행<br/>');
+	}
+	function doB() {
+		document.write('함수 B 실행<br/>');
+	}
+	
+	var arr= [doA, doB];
+	console.log(arr);
+	
+	arr[0] (); //doA();
+	arr[1] (); //doB();
+	
+	var f1 = function() {return2; };
+	var f2 = function() {return 1;}
+	var f3 = function(a) {return a*a};
+	
+/* 	function f4(x, y, z) {
+		return z (x()+y() )
+	}
+	var result = f4(f1, f2, f3);
+	document.wrute('결과:' + result);
+	 */
+	
+	function f4(x, y, z) {
+		return z( x()+y() )
+	}
+	var result = f4(
+			function() {return2; },
+			function() {return 1;},
+			function(a) {return a*a}
+			);
+	document.wrute('결과:' + result);
 	</script>
 </body>
 </html>
