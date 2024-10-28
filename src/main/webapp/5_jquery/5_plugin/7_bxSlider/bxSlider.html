@@ -12,6 +12,28 @@ img{border:none 0;vertical-align:top;}
 #nextBtn{position:absolute;right:15px;top:10px;} 
 </style>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("#slide_banner").bxSlider({
+		minSlides : 4,
+		maxSlides : 4,
+		slideMargin : 10,
+		slideWidth	: 80,
+		
+		auto:true,
+		moveSlides: 1,
+		pause : 500
+	});
+});
+
+
+</script>
 
 </head>
 <body>

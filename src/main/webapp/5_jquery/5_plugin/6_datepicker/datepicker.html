@@ -4,10 +4,34 @@
 <meta charset="UTF-8" />
 <title>Datepicker</title>
 <link rel="stylesheet" type="text/css"
-  href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
-<script type="text/javascript"  src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script type="text/javascript"   src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
+<script type="text/javascript" 
+src="http://code.jquery.com/jquery-1.9.0.js"></script>
 
+<script type="text/javascript" 
+src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<!-- datepicker 한국어로 -->
+<script src="http://ajax.googleapis.com/ajax/libs/
+		jqueryui/1.11.4/i18n/datepicker-ko.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	
+	let date = $('#datepicker');
+	date.datepicker({
+		showOn : 'button',
+		buttonImage : './images/calendar.gif',
+		showButtonPanel : true,
+		showAnim : 'slideDown'
+	});
+	date.attr("readonly", true);
+	
+	let day1 = new Date('2025/12/25');	//하나일경우 객체로 주지말기
+	date.datepicker('setDate', day1);
+	
+	
+})
+</script>
 </head>
 <body>
 <label for="date">날짜:</label>

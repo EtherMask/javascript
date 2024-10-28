@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>datepicker2</title>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.0/themes/ui-lightness/jquery-ui.css" />
+<!-- jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<!-- datepicker 한국어로 -->
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ko.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	let today = new Date();
+	$('#year').text(today.getFullYear);
+/* 	$('#month').text(today.getFullMonth);
+	$('#date').text(today.getFullDate); */
+	
+	$('#fromDate').datepicker({
+		showOn : 'button',
+		//buttonImage : './images/calendar.gif',
+		buttonText : '날짜선택',
+		minDate : 0,
+		onClose : function(selectedDate){
+			//alert(selectedDate)
+			$('#toDate').datepicker('option', ',minDate', 
+					selectedDate);
+			}
+	});
+	
+	$('#toDate').datepicker({
+		showOn : 'button',
+		//buttonImage : './images/calendar.gif',
+		buttonText : '날짜선택',
+		minDate : 0,
+		onClose : function(selectedDate){
+			//alert(selectedDate)
+			}
+	})
+});
+
+</script>
+</head>
+<body>
+
+	오늘 날짜: <span id='year'></span>2024년
+			 <span id='month'></span>월
+			 <span id='date'></span>일
+	<hr/>
+	<label for='fromDate'>시작일</label>
+	<input type='text' id='fromDate'>
+	~
+	<label for='toDate'>종료일</label>
+	<input type='text' id='toDate'>
+
+<body>
+</html>
