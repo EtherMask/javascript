@@ -10,7 +10,7 @@ src="http://code.jquery.com/jquery-3.7.1.js"></script>
 $(function(){
 	$('#closeWin').click(function(){
 		if($('input[type="checkbox"]').prop('checked')){
-			// 쿠키에 저장(쿠키먕:promotion, 쿠키값:no, 유효기간1일)
+			// 쿠키에 저장(쿠키명:promotion, 쿠키값:no, 유효기간1일)
 			$.cookie('promotion', 'no', {expires: 1});
 		}
 		window.close();
