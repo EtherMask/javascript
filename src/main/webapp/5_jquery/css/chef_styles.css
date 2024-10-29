@@ -1,0 +1,114 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+body{
+	padding:1.5em 2em;
+	line-height:1.4;
+	font-family:Arial, Helvetica, sans-serif;; 
+	
+/* 	flex-direction: row;  가로 방향으로 정렬 */	
+	gap: 20px; /* 메뉴와 주문 내역 간격 */
+}
+
+
+/* 하단은 서연님 파일 !!!  */
+
+
+    /* 좌우 레이아웃 스타일 설정 */
+ /* 좌우 레이아웃 스타일 설정 */
+
+
+#leftOrderList, #rightOrderActions {
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드 느낌의 그림자 */
+    border: 2px solid #000; /* 검은색 테두리 */
+    
+    text-align: center;
+}
+
+#leftOrderList {
+    width: 60%;
+    height: 500px;
+    background-color: #f9f9f9; /* 배경색 추가 */
+    float: left;
+    
+}
+
+#rightOrderActions {
+    width: 40%;
+    height: 500px;
+    align-items: center;
+    background-color: #f4f4f4;
+    
+    float: right;
+    
+}
+
+
+/* 상단 남은 시간과 전체 삭제 버튼 정렬 */
+.topActions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.timerText {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.deleteAllBtn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ff6347; /* 삭제 버튼 색상 */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deleteAllBtn:hover {
+    background-color: #d9534f;
+}
+
+/* 주문 목록 스타일 */
+.countBtn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ffcc00; /* 버튼 색상 */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.countBtn:hover {
+    background-color: #ffb400; /* hover 시 어두운 색상 */
+}
+
+#rightOrderActions .button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#rightOrderActions .button:hover {
+    background-color: #0056b3;
+    
+}
+
+

@@ -14,9 +14,9 @@
 $(function(){
 	
 	let today = new Date();
-	$('#year').text(today.getFullYear);
-/* 	$('#month').text(today.getFullMonth);
-	$('#date').text(today.getFullDate); */
+	$('#year').text(today.getFullYear());
+ 	$('#month').text(today.getMonth());
+	$('#date').text(today.getDate());
 	
 	$('#fromDate').datepicker({
 		showOn : 'button',

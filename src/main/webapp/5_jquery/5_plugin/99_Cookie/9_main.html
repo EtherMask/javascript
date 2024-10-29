@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>메인페이지</title>
+<!-- jqeury -->
+<script type="text/javascript"
+src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<!-- cookie -->
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<!-- user js -->
 <script type="text/javascript">
-window.open("9_promotion.html","","width=400, height=360");
+
+	// 쿠키에서 'promotion'에 값을 가지고 와서 'no'가 아닌경우만 새 윈도우 출력
+if($.cookie('promotion') != 'no')
+		window.open("9_promotion.html", "","width=500, height=400")
 </script>
 </head>
 <body>

@@ -1,0 +1,262 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+body{
+	padding:1.5em 2em;
+	line-height:1.4;
+	font-family:Arial, Helvetica, sans-serif;; 
+	display:flex;
+/* 	flex-direction: row;  가로 방향으로 정렬 */	
+	gap: 20px; /* 메뉴와 주문 내역 간격 */
+}
+
+#leftdiv {
+	flex: 3; /* 메뉴 영역 비율 */
+}
+
+#rightdiv {
+	border: 2px solid #666;
+	border-radius: 4px;
+	padding: 1em;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+#listTable {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+
+}
+
+#listTable th, #listTable td {
+	padding: 8px;
+	border-bottom: 1px solid #ccc;
+}
+
+#listTable #listtitle th {
+	font-size: 1.1em;
+	background-color: #ddd;
+}
+
+#listTable #totallist td {
+	font-weight: bold;
+	background-color: #eee;
+}
+
+#listTable #listtr {
+	font-weight: bold;
+	background-color: #ddd;
+}
+
+.all{
+	 width:610px; 
+	/*  max-width:100%;
+	height: auto;  */
+}
+
+.tabSet{
+	padding:0 0 1em;
+	border:2px solid #FCEB8C; /* 전체테두리색 */
+	margin:0 0 20px;
+	padding:3px;
+	border-radius:4px;
+}
+
+ul{
+	overflow:hidden;
+	padding:12px 12px 0;
+	background:#F3EBAE url(bg1.png) repeat-x 0 0; /* 탭배경색  */
+	border-radius:4px;
+	/*zoom:1;  ie clear float */
+}
+
+	ul li{
+		float:left;
+		padding:0 4px 0 0;
+	}
+		ul li a{
+			float:left;
+			color:#2E7D32; /*탭요소 안에 글자색  */
+			background:#FFF6D3; /*탭요소 하나씩 색 */
+			padding:.45em 1.25em;
+			display:none;
+			border-radius:5px 5px 0 0;
+			text-shadow:0 0 3px #fff;
+			font-weight:bold;
+			text-decoration:none;
+			box-shadow:0 0 5px #444;
+			height: 25px;
+			width : 100px;
+			text-align: center;
+		}
+		ul li a:hover{
+			text-decoration:underline;
+
+		}
+		ul li a.on{
+			background:#fff;
+			color : red; /* 탭을 선택하면 내가 선택한 탭의 글자색만 변함   */
+			cursor:default;
+		}
+		ul li a.on:hover{
+			text-decoration:none;
+		}
+.panel{
+	background:#FFFFF0 ; /* 이미지가 올라간 판넬 배경색  */
+	padding:.75em 15px .4em;
+	margin:0 0 .5em;
+	width:700px;
+}
+
+
+.menu img {
+	border : 1px solid #aaa;
+	 width : 230px;
+	height : 150px;
+	object-fit: cover;
+	transition: transform 0.3s;
+}
+
+.menu img.hover {
+    transform: scale(1.2); /* 이미지 확대 */
+}
+
+
+/* 하단은 서연님 파일 !!!  */
+
+
+    /* 좌우 레이아웃 스타일 설정 */
+ /* 좌우 레이아웃 스타일 설정 */
+#orderContainer {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* 좌우 섹션 간격 */
+    text-align: center;
+}
+
+#leftOrderList, #rightOrderActions {
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드 느낌의 그림자 */
+    border: 2px solid #000; /* 검은색 테두리 */
+}
+
+#leftOrderList {
+    width: 60%;
+    background-color: #f9f9f9; /* 배경색 추가 */
+}
+
+#rightOrderActions {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* 상단 남은 시간과 전체 삭제 버튼 정렬 */
+.topActions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.timerText {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.deleteAllBtn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ff6347; /* 삭제 버튼 색상 */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deleteAllBtn:hover {
+    background-color: #d9534f;
+}
+
+/* 주문 목록 스타일 */
+.countBtn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ffcc00; /* 버튼 색상 */
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.countBtn:hover {
+    background-color: #ffb400; /* hover 시 어두운 색상 */
+}
+
+#rightOrderActions .button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#rightOrderActions .button:hover {
+    background-color: #0056b3;
+    
+}
+
+/* 선택된 상품 수에 선 추가 */
+.selectedProductCountContainer {
+    width: 100%;
+    padding-top: 10px; /* 선과 내용 사이 간격 */
+    border-top: 1px solid #333; /* 검은색 선 추가 */
+    margin-top: 10px; /* 위 요소와의 간격 */
+}
+
+
+/* 타이머와 기타 정보 텍스트 스타일 */
+.timerText, .infoText {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #555;
+}
+
+
+.payAllBtn {
+    width: 100%; 
+    padding: 10px 20px; 
+    border-radius: 4px;
+    background-color: #000; /* 검은색 배경 */
+    color: #fff; /* 흰색 글자색 */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em; /* 글자 크기 조정 */
+}
+
+.payAllBtn:hover {
+    background-color: #333; /* hover 시 어두운 색상 */
+}
+
+.navbar-brand img {
+    max-width: 100%; /* 부모 요소의 너비에 맞게 조정 */
+    height: auto; /* 비율 유지 */
+}
+
+

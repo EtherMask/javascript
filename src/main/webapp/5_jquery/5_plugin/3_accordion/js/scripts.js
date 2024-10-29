@@ -8,6 +8,7 @@ $(function(){
 		,event: 'mouseover'
 		,animate :{
 			dulation : 1000,
+			
 			easing : 'easeInElastic'
 		}
 	});
@@ -15,8 +16,8 @@ $(function(){
 	$('.accordion > dt').css({'cursor': 'pointer'});
 });
 
-/** accordion 위젯의 주요 파라메타
- 
+/* accordion 위젯의 주요 파라메타
+
  active	 : 디폴트로 열여둘 패널  ( default ; 0 )
  animate : 애니메이션 방법 ( default ; {}  )
  collpasible : 모든 패널을 닫힌 상태로 할 것인지 여부 ( default ; false )
@@ -26,7 +27,7 @@ $(function(){
  				auto - 가장 높은 패널에 맞춘다
  				fill - 부모 요소에 맞춘다
  				content  : 각각의 높이에 맞춘다 
- icons : 적용할 아이콘 
+ icons	: 적용할 아이콘 
  		 header : 헤더(일반)
  		 activeHeader : 활성화 상태 헤더
  */
